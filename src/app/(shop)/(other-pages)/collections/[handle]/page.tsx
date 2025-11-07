@@ -32,6 +32,7 @@ export default async function Collection({ params }: { params: Promise<{ handle:
   }
   const products = collection.products
   const breadcrumbs = [{ id: 1, name: 'Home', href: '/' }]
+  const isAll = handle === 'all'
 
   return (
     <div className="container">
@@ -60,7 +61,7 @@ export default async function Collection({ params }: { params: Promise<{ handle:
               <ProductSortDropdown />
             </div>
 
-            <CategoryFilters2 className="ml-auto" />
+            <CategoryFilters2 className="ml-auto" hideBrand={isAll} />
           </div>
 
           <Divider className="mt-5" />
@@ -69,7 +70,7 @@ export default async function Collection({ params }: { params: Promise<{ handle:
             <section>
               <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-7 xl:grid-cols-4">
                 {products.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product} showVendor={!isAll} />
                 ))}
               </div>
 

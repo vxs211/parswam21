@@ -59,10 +59,12 @@ const filters = [
 
 interface Props {
   className?: string
+  hideBrand?: boolean
 }
 
-export default function CategoryFilters2({ className }: Props) {
+export default function CategoryFilters2({ className, hideBrand = false }: Props) {
   const { open: openAside } = useAside()
+  const sections = hideBrand ? filters.filter((f) => f.id !== 'brand') : filters
 
   return (
     <div className={className}>
@@ -82,7 +84,7 @@ export default function CategoryFilters2({ className }: Props) {
       </button>
 
       <PopoverGroup className="hidden sm:flex sm:items-baseline sm:space-x-8">
-        {filters.map((section, sectionIdx) => {
+        {sections.map((section, sectionIdx) => {
           const bage = section.options.filter((option) => option.checked).length
           return (
             <Popover key={section.name} id="menu" className="relative inline-block text-left">

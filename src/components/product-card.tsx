@@ -8,9 +8,10 @@ interface ProductCardProps {
   product: TProductItem
   className?: string
   imageRatio?: string
+  showVendor?: boolean
 }
 
-export default function ProductCard({ product, className, imageRatio = 'aspect-3/4' }: ProductCardProps) {
+export default function ProductCard({ product, className, imageRatio = 'aspect-3/4', showVendor = true }: ProductCardProps) {
   const { id, title, price, featured_image, handle, images = [], tags, vendor, selected_options } = product
 
   const primaryImage = images?.[0]
@@ -52,9 +53,11 @@ export default function ProductCard({ product, className, imageRatio = 'aspect-3
       </div>
 
       {/* Category Label */}
-      <div className="absolute top-3 left-3">
-        <div className="rounded-full bg-white px-3.5 py-1.5 text-xs leading-none text-zinc-900 uppercase">{vendor}</div>
-      </div>
+      {showVendor ? (
+        <div className="absolute top-3 left-3">
+          <div className="rounded-full bg-white px-3.5 py-1.5 text-xs leading-none text-zinc-900 uppercase">{vendor}</div>
+        </div>
+      ) : null}
 
       {/* Shopping Bag Icon */}
       <div className="absolute top-3 right-3">
