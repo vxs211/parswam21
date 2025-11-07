@@ -793,8 +793,8 @@ export async function getCollectionByHandle(handle: string) {
       description:
         'Discover our complete range of skincare, haircare, and body care products. Find the perfect product for your needs.',
       updatedAt: '2025-05-06T10:00:00-04:00',
-      image: '/images/skincare/c1.webp',
-      products: (await getProducts()).slice(0, 8),
+      image: '/images/fashion/Parshwam-1.webp',
+      products: (await getFashionProducts()).slice(0, 7),
     }
   }
   const allCollections = await getCollections('all')
@@ -1405,7 +1405,7 @@ export async function getProducts() {
         { src: '/images/fashion/Parshwam-7.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
         { src: '/images/fashion/Parshwam-7-7.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
       ],
-      featured_image: { src: '/images/fashion/p7-1.jpg', width: 1920, height: 2880, alt: 'lorem insput dolor' },
+      featured_image: { src: '/images/fashion/Parshwam-7.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
       options: [
         {
           name: 'Color',
@@ -1443,7 +1443,7 @@ export async function getProducts() {
         { src: '/images/fashion/Parshwam-1.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
         { src: '/images/fashion/Parshwam-1-1.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
       ],
-      featured_image: { src: '/images/fashion/p8-1.jpg', width: 1920, height: 2880, alt: 'lorem insput dolor' },
+      featured_image: { src: '/images/fashion/Parshwam-1.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
       options: [
         {
           name: 'Color',
@@ -1481,7 +1481,7 @@ export async function getProducts() {
         { src: '/images/fashion/Parshwam-6.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
         { src: '/images/fashion/Parshwam-6-6.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
       ],
-      featured_image: { src: '/images/fashion/p9-1.jpg', width: 1920, height: 2880, alt: 'lorem insput dolor' },
+      featured_image: { src: '/images/fashion/Parshwam-6.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
       options: [
         {
           name: 'Color',
@@ -1519,7 +1519,7 @@ export async function getProducts() {
         { src: '/images/fashion/Parshwam-3.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
         { src: '/images/fashion/Parshwam-3-3.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
       ],
-      featured_image: { src: '/images/fashion/p10-1.jpg', width: 1920, height: 2880, alt: 'lorem insput dolor' },
+      featured_image: { src: '/images/fashion/Parshwam-3.webp', width: 1920, height: 2880, alt: 'lorem insput dolor' },
       options: [
         {
           name: 'Color',
