@@ -1,6 +1,4 @@
 {
-  "/icon.png/route": "app/icon.png/route.js",
-  "/(shop)/(other-pages)/blog/page": "app/(shop)/(other-pages)/blog/page.js",
   "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js",
   "/(shop)/(other-pages)/collections/[handle]/page": "app/(shop)/(other-pages)/collections/[handle]/page.js"
 }

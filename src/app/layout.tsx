@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     'Skincare',
     'E-commerce',
   ],
+  icons: {
+    icon: '/images/fashion/favicon.jpg',
+  },
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

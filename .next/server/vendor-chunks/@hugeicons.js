@@ -41,16 +41,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(rsc)/./node_modules/@hugeicons/core-free-icons/dist/esm/ArrowUpRight01Icon.js":
-/*!********************************************************************************!*\
-  !*** ./node_modules/@hugeicons/core-free-icons/dist/esm/ArrowUpRight01Icon.js ***!
-  \********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ArrowUpRight01Icon)\n/* harmony export */ });\nconst ArrowUpRight01Icon = /*#__PURE__*/ [\n  [\"path\", { d: \"M9 6.65032C9 6.65032 15.9383 6.10759 16.9154 7.08463C17.8924 8.06167 17.3496 15 17.3496 15M16.5 7.5L6.5 17.5\", stroke: \"currentColor\", strokeLinecap: \"round\", strokeLinejoin: \"round\", strokeWidth: \"1.5\", key: \"0\" }]\n];\n\n\n//# sourceMappingURL=ArrowUpRight01Icon.js.map\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvQGh1Z2VpY29ucy9jb3JlLWZyZWUtaWNvbnMvZGlzdC9lc20vQXJyb3dVcFJpZ2h0MDFJY29uLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBQTtBQUNBLGFBQWEsME5BQTBOO0FBQ3ZPOztBQUV5QztBQUN6QyIsInNvdXJjZXMiOlsiL1VzZXJzL3Z4cy9wYXJzd2FtMjEvbm9kZV9tb2R1bGVzL0BodWdlaWNvbnMvY29yZS1mcmVlLWljb25zL2Rpc3QvZXNtL0Fycm93VXBSaWdodDAxSWNvbi5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zdCBBcnJvd1VwUmlnaHQwMUljb24gPSAvKiNfX1BVUkVfXyovIFtcbiAgW1wicGF0aFwiLCB7IGQ6IFwiTTkgNi42NTAzMkM5IDYuNjUwMzIgMTUuOTM4MyA2LjEwNzU5IDE2LjkxNTQgNy4wODQ2M0MxNy44OTI0IDguMDYxNjcgMTcuMzQ5NiAxNSAxNy4zNDk2IDE1TTE2LjUgNy41TDYuNSAxNy41XCIsIHN0cm9rZTogXCJjdXJyZW50Q29sb3JcIiwgc3Ryb2tlTGluZWNhcDogXCJyb3VuZFwiLCBzdHJva2VMaW5lam9pbjogXCJyb3VuZFwiLCBzdHJva2VXaWR0aDogXCIxLjVcIiwga2V5OiBcIjBcIiB9XVxuXTtcblxuZXhwb3J0IHsgQXJyb3dVcFJpZ2h0MDFJY29uIGFzIGRlZmF1bHQgfTtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPUFycm93VXBSaWdodDAxSWNvbi5qcy5tYXBcbiJdLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOlswXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/@hugeicons/core-free-icons/dist/esm/ArrowUpRight01Icon.js\n");
-
-/***/ }),
-
 /***/ "(rsc)/./node_modules/@hugeicons/core-free-icons/dist/esm/BoatIcon.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@hugeicons/core-free-icons/dist/esm/BoatIcon.js ***!
