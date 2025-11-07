@@ -1,4 +1,4 @@
-// File: /Users/vxs/parswam21/src/app/(shop)/(home-skincare)/layout.tsx
+// File: D:\parswam21\src\app\(shop)\(home-skincare)\layout.tsx
 import * as entry from '../../../../../src/app/(shop)/(home-skincare)/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
