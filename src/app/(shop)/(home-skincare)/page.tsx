@@ -38,7 +38,7 @@ export default async function Home() {
             showMobileWarning={false}
             showTooltip={true}
             displayOverlayContent={true}
-            overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
+            overlayContent={<p className="font-sans font-bold text-zinc-950">Kendrick Lamar - GNX</p>}
           />
           <TiltedCard
             imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
@@ -53,7 +53,7 @@ export default async function Home() {
             showMobileWarning={false}
             showTooltip={true}
             displayOverlayContent={true}
-            overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
+            overlayContent={<p className="font-sans font-bold text-zinc-950">Kendrick Lamar - GNX</p>}
           />
           <TiltedCard
             imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
@@ -68,7 +68,7 @@ export default async function Home() {
             showMobileWarning={false}
             showTooltip={true}
             displayOverlayContent={true}
-            overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
+            overlayContent={<p className="font-sans font-bold text-zinc-950">Kendrick Lamar - GNX</p>}
           />
           <TiltedCard
             imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
@@ -83,7 +83,7 @@ export default async function Home() {
             showMobileWarning={false}
             showTooltip={true}
             displayOverlayContent={true}
-            overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
+            overlayContent={<p className="font-sans font-bold text-zinc-950">Kendrick Lamar - GNX</p>}
           />
         </div>
       </div>
