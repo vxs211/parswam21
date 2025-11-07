@@ -7,6 +7,7 @@ import { TextLink } from '../text'
 import CartIconBtn from './cart-icon-btn'
 import HamburgerIconMenu from './hamburger-icon-menu'
 import SearchIconPopover from './search-icon-popover'
+import ShopDropdown from './shop-dropdown'
 import UserIconPopover from './user-icon-popover'
 
 interface HeaderProps {
@@ -44,7 +45,7 @@ const Header = ({ className, hasBottomBorder = true, variant = 'default' }: Head
 
           {/* MAIN CENTER MENUS */}
           <div className="hidden lg:flex lg:gap-x-8">
-            <TextLink href="/collections/all">Shop</TextLink>
+            <ShopDropdown />
             <TextLink href="/about-us">About Us</TextLink>
             <TextLink href="/blog">Blogs</TextLink>
             <TextLink href="/contact">Contact Us</TextLink>
