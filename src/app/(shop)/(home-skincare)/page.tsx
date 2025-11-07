@@ -4,6 +4,7 @@ import FeatureSection3 from '@/components/sections/feature-section-3'
 import HeroSection3 from '@/components/sections/hero-section-3'
 import SectionCollectionCarousel from '@/components/sections/section-collection-carousel'
 import SectionProductCarousel from '@/components/sections/section-product-carousel'
+import TiltedCard from '@/components/tiltedcards'
 import { getCollections, getGroupCollections } from '@/data'
 import clsx from 'clsx'
 import { Metadata } from 'next'
@@ -22,8 +23,71 @@ export default async function Home() {
     <div>
       <HeroSection3 />
 
+      <div className="container mt-16 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 justify-items-center place-content-center gap-10 lg:gap-12 sm:grid-cols-2 lg:grid-cols-4">
+          <TiltedCard
+            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+            altText="Kendrick Lamar - GNX Album Cover"
+            captionText="Kendrick Lamar - GNX"
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
+          />
+          <TiltedCard
+            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+            altText="Kendrick Lamar - GNX Album Cover"
+            captionText="Kendrick Lamar - GNX"
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
+          />
+          <TiltedCard
+            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+            altText="Kendrick Lamar - GNX Album Cover"
+            captionText="Kendrick Lamar - GNX"
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
+          />
+          <TiltedCard
+            imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
+            altText="Kendrick Lamar - GNX Album Cover"
+            captionText="Kendrick Lamar - GNX"
+            containerHeight="300px"
+            containerWidth="300px"
+            imageHeight="300px"
+            imageWidth="300px"
+            rotateAmplitude={12}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+            overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
+          />
+        </div>
+      </div>
       <SectionCollectionCarousel className="container mt-20 sm:mt-28 lg:mt-28" groupCollections={groupCollections} />
-
       {collections
         ?.filter((_, i) => i < 3)
         .map((collection, index) => (
@@ -36,7 +100,6 @@ export default async function Home() {
             collectionDescription={collection?.description}
           />
         ))}
-
       <FeatureSection2
         className="container mt-20 sm:mt-28 lg:mt-32"
         variant="up"
@@ -69,7 +132,6 @@ export default async function Home() {
       <div className="container mt-24 sm:mt-28 lg:mt-40">
         <Divider />
       </div>
-
       <FeatureSection3
         className="mt-20 sm:mt-28 lg:mt-32"
         heading={`Explore our exclusive denim collections, blending comfort with <span data-slot="italic">timeless style.</span>`}
