@@ -14,13 +14,18 @@ interface GridMotionProps {
 const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }) => {
   const gridRef = useRef<HTMLDivElement>(null);
   const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const mouseXRef = useRef<number>(window.innerWidth / 2);
+  // Initialize without touching window during SSR; set on mount.
+  const mouseXRef = useRef<number>(0);
 
   const totalItems = 28;
   const defaultItems = Array.from({ length: totalItems }, (_, index) => `Item ${index + 1}`);
   const combinedItems = items.length > 0 ? items.slice(0, totalItems) : defaultItems;
 
   useEffect(() => {
+    // Set initial mouse X to center of viewport on client
+    if (typeof window !== 'undefined') {
+      mouseXRef.current = window.innerWidth / 2;
+    }
     gsap.ticker.lagSmoothing(0);
 
     const handleMouseMove = (e: MouseEvent): void => {
@@ -35,7 +40,8 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
       rowRefs.current.forEach((row, index) => {
         if (row) {
           const direction = index % 2 === 0 ? 1 : -1;
-          const moveAmount = ((mouseXRef.current / window.innerWidth) * maxMoveAmount - maxMoveAmount / 2) * direction;
+          const vw = typeof window !== 'undefined' ? window.innerWidth : 1;
+          const moveAmount = ((mouseXRef.current / vw) * maxMoveAmount - maxMoveAmount / 2) * direction;
 
           gsap.to(row, {
             x: moveAmount,
@@ -48,10 +54,14 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
     };
 
     const removeAnimationLoop = gsap.ticker.add(updateMotion);
-    window.addEventListener('mousemove', handleMouseMove);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('mousemove', handleMouseMove);
+      }
       removeAnimationLoop();
     };
   }, []);

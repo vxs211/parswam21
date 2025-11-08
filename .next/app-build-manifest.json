@@ -15,21 +15,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(shop)/(home-skincare)/page.js"
-    ],
-    "/(shop)/(other-pages)/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/layout.js"
-    ],
-    "/(shop)/(other-pages)/collections/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/collections/layout.js"
-    ],
-    "/(shop)/(other-pages)/collections/[handle]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/collections/[handle]/page.js"
     ]
   }
 }
