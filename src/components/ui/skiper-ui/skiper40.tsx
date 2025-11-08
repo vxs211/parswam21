@@ -24,7 +24,7 @@ export { Link000, Link001, Link002, Link003, Link004, Link005, Skiper40 };
 const Link000 = ({
   children,
   href,
-  className,
+  className = '',
 }: {
   children: React.ReactNode;
   href: string;
@@ -48,7 +48,7 @@ const Link000 = ({
 const Link001 = ({
   children,
   href,
-  className,
+  className = '',
 }: {
   children: React.ReactNode;
   href: string;
@@ -88,7 +88,7 @@ const Link001 = ({
 const Link002 = ({
   children,
   href,
-  className,
+  className = '',
 }: {
   children: React.ReactNode;
   href: string;
@@ -128,7 +128,7 @@ const Link002 = ({
 const Link003 = ({
   children,
   href,
-  className,
+  className = '',
 }: {
   children: React.ReactNode;
   href: string;
@@ -169,7 +169,7 @@ const Link003 = ({
 const Link004 = ({
   children,
   href,
-  className,
+  className = '',
 }: {
   children: React.ReactNode;
   href: string;
@@ -209,7 +209,7 @@ const Link004 = ({
 const Link005 = ({
   children,
   href,
-  className,
+  className = '',
 }: {
   children: React.ReactNode;
   href: string;
