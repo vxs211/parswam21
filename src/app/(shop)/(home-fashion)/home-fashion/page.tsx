@@ -37,11 +37,7 @@ export default async function Home() {
           showMobileWarning={false}
           showTooltip={true}
           displayOverlayContent={true}
-          overlayContent={
-            <p className="font-sans font-bold text-white">
-              Kendrick Lamar - GNX
-            </p>
-          }
+          overlayContent={<p className="font-sans font-bold text-white">Kendrick Lamar - GNX</p>}
         />
       </div>
 
@@ -61,7 +57,7 @@ export default async function Home() {
         ))}
 
       <FeatureSection2
-        className="container mt-20 sm:mt-28 lg:mt-32"
+        className="container mt-8 sm:mt-8 lg:mt-32"
         variant="up"
         heading={`Premium Denim <span data-slot="italic">Crafted</span> With Care <span data-slot="italic">&</span> Precision`}
         faqs={[

@@ -9,37 +9,37 @@ import { useEffect, useRef, useState } from 'react'
 const newArrivalCategories = [
   {
     name: 'SALE',
-    href: '/collections/sale',
+    href: '/sale',
     description: 'Shop markdowns and limited-time offers.',
     image: '/images/fashion/Parshwam-6.webp',
   },
   {
     name: 'NEW ARRIVALS',
-    href: '/collections/new-arrivals',
+    href: '/new-arrivals',
     description: 'Fresh drops and the latest trends.',
     image: '/images/fashion/Parshwam-1.webp',
   },
   {
     name: 'FEATURED COLLECATION',
-    href: '/collections/featured-collection',
+    href: '/featured-collection',
     description: 'Handpicked highlights of the week.',
     image: '/images/fashion/Parshwam-2.webp',
   },
   {
     name: 'PREMIUM COLLECATION',
-    href: '/collections/premium-collection',
+    href: '/premium-collection',
     description: 'Elevated fabrics and refined details.',
     image: '/images/fashion/Parshwam-3.webp',
   },
   {
     name: 'ONLINE EXCUSIVE',
-    href: '/collections/online-exclusive',
+    href: '/online-exclusive',
     description: 'Only available on our website.',
     image: '/images/fashion/Parshwam-4.webp',
   },
   {
     name: 'BEST SALE',
-    href: '/collections/best-selling',
+    href: '/best-selling',
     description: 'Our most-loved styles and top sellers.',
     image: '/images/fashion/Parshwam-5.webp',
   },
