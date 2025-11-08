@@ -167,26 +167,46 @@ export default async function Home() {
       />
       {/* Logos loop above footer */}
       <div className="container mt-20 sm:mt-28 lg:mt-32">
-        <LogoLoop
-          logos={[
-            { src: '/images/logo-clouds-1.svg', alt: 'Logo 1', href: '#' },
-            { src: '/images/logo-clouds-2.svg', alt: 'Logo 2', href: '#' },
-            { src: '/images/logo-clouds-3.svg', alt: 'Logo 3', href: '#' },
-            { src: '/images/logo-clouds-4.svg', alt: 'Logo 4', href: '#' },
-            { src: '/images/logo-clouds-5.svg', alt: 'Logo 5', href: '#' },
-            { src: '/parswam.svg', alt: 'Parswam', href: '#' },
-            { src: '/images/logo.png', alt: 'Logo', href: '#' }
-          ]}
-          speed={120}
-          direction="left"
-          logoHeight={40}
-          gap={40}
-          pauseOnHover
-          scaleOnHover
-          fadeOut
-          fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
-        />
+        <div className="space-y-8">
+          {/* First line - left to right */}
+          <LogoLoop 
+            logos={[
+              { src: '/clients/Untitled-design-21-4.png' },
+              { src: '/clients/Untitled-design-23-3.png' },
+              { src: '/clients/Untitled-design-24-4.png' },
+              { src: '/clients/Untitled-design-25.png' },
+            ]} 
+            speed={40}
+            direction="left"
+            logoHeight={60}
+            gap={48}
+            pauseOnHover
+            fadeOut
+            fadeOutColor="#fff"
+            scaleOnHover
+            ariaLabel="Our Clients"
+          />
+  
+          {/* Second line - right to left */}
+          <LogoLoop 
+            logos={[
+              { src: '/clients/Untitled-design-26.png' },
+              { src: '/clients/Untitled-design-27.png' },
+              { src: '/clients/Untitled-design-28.png' },
+              { src: '/clients/Untitled-design-29.png' },
+              { src: '/clients/Untitled-design-31.png' }
+            ]} 
+            speed={40}
+            direction="right"
+            logoHeight={60}
+            gap={48}
+            pauseOnHover
+            fadeOut
+            fadeOutColor="#fff"
+            scaleOnHover
+            ariaLabel="Our Clients"
+          />
+        </div>
       </div>
       <div className="container mt-24 sm:mt-28 lg:mt-40">
         <Divider />
