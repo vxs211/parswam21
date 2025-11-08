@@ -45,10 +45,10 @@ const Header = ({ className, hasBottomBorder = true, variant = 'default' }: Head
 
           {/* MAIN CENTER MENUS */}
           <div className="hidden lg:flex lg:gap-x-8">
+            <TextLink href="/">Home</TextLink>
             <ShopDropdown />
-            <TextLink href="/about-us">About Us</TextLink>
-            <TextLink href="/blog">Blogs</TextLink>
-            <TextLink href="/contact">Contact Us</TextLink>
+            <TextLink href="/collections/new-arrivals">New Arrivals</TextLink>
+            <TextLink href="/fit-guide">Fit Guide</TextLink>
           </div>
 
           {/* RIGHT ICON BUTTONS */}
