@@ -41,22 +41,21 @@ export default async function Collection({ params }: { params: Promise<{ handle:
           breadcrumbs={breadcrumbs}
           currentPage={(() => {
             const map: Record<string, string> = {
-              // Base handles
-              'relaxed-fit': 'Men Collection',
+              // Current handles
+              'men-collection': 'Men Collection',
               'slim-fit': 'Kids Collection',
               'bootcut': 'Denim Collection',
               'skinny-jeans': 'Cotton Collection',
-              // Pretty/group handles
-              'men-collection': 'Men Collection',
+              // Legacy handles (for backwards compatibility)
+              'relaxed-fit': 'Men Collection',
               'mens-collection': 'Men Collection',
               'kids-collection': 'Kids Collection',
               'denim-collection': 'Denim Collection',
               'cotton-collection': 'Cotton Collection',
-              // Legacy
               'mens-jeans': 'Men Collection',
               'kids-jeans': 'Kids Collection',
               'denim-jeans': 'Denim Collection',
-              'cotton-pants': 'Cotton Collection',
+              'cotton-pants': 'Cotton Collection'
             }
             return map[handle] ?? collection.title
           })()}
@@ -74,22 +73,20 @@ export default async function Collection({ params }: { params: Promise<{ handle:
               <span data-slot="italic" className="underline">
                 {(() => {
                   const titleMap: Record<string, string> = {
-                    // Base collection handles
-                    'relaxed-fit': 'Mens',
+                    // Current handles
+                    'men-collection': 'Mens',
                     'slim-fit': 'Kids',
                     'bootcut': 'Denim',
                     'skinny-jeans': 'Cotton',
-                    // Pretty/group handles
-                    'men-collection': 'Mens',
-                    'mens-collection': 'Mens',
+                    // Legacy handles (for backwards compatibility)
+                    'relaxed-fit': 'Mens',
                     'kids-collection': 'Kids',
                     'denim-collection': 'Denim',
                     'cotton-collection': 'Cotton',
-                    // Legacy handles
                     'mens-jeans': 'Mens',
                     'kids-jeans': 'Kids',
                     'denim-jeans': 'Denim',
-                    'cotton-pants': 'Cotton',
+                    'cotton-pants': 'Cotton'
                   }
                   return titleMap[handle] ?? collection.title
                 })()}
@@ -114,7 +111,12 @@ export default async function Collection({ params }: { params: Promise<{ handle:
             <section>
               <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-7 xl:grid-cols-4">
                 {products.map((product) => (
-                  <ProductCard key={product.id} product={product} showVendor={!isAll} />
+                  <ProductCard 
+                    key={product.id} 
+                    product={product} 
+                    showVendor={!isAll}
+                    labelOverride={isAll ? undefined : collection.title.toUpperCase().split(' ')[0]}
+                  />
                 ))}
               </div>
 

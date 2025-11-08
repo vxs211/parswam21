@@ -9,9 +9,10 @@ interface ProductCardProps {
   className?: string
   imageRatio?: string
   showVendor?: boolean
+  labelOverride?: string
 }
 
-export default function ProductCard({ product, className, imageRatio = 'aspect-3/4', showVendor = true }: ProductCardProps) {
+export default function ProductCard({ product, className, imageRatio = 'aspect-3/4', showVendor = true, labelOverride }: ProductCardProps) {
   const { id, title, price, featured_image, handle, images = [], tags, vendor, selected_options } = product
 
   const primaryImage = images?.[0]
@@ -55,7 +56,7 @@ export default function ProductCard({ product, className, imageRatio = 'aspect-3
       {/* Category Label */}
       {showVendor ? (
         <div className="absolute top-3 left-3">
-          <div className="rounded-full bg-white px-3.5 py-1.5 text-xs leading-none text-zinc-900 uppercase">{vendor}</div>
+          <div className="rounded-full bg-white px-3.5 py-1.5 text-xs leading-none text-zinc-900 uppercase">{labelOverride ?? vendor}</div>
         </div>
       ) : null}
 

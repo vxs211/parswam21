@@ -11,19 +11,19 @@ import ProductSortDropdown from '../collections/product-sort-dropdown'
 import StarSvg from '../collections/star-svg'
 
 export const metadata: Metadata = {
-  title: 'Collection Premium Collection',
-  description: 'Elevated fabrics and refined details.',
+  title: 'Collection Kids Collection',
+  description: 'Comfortable and stylish jeans for kids.',
 }
 
-export default async function PremiumCollectionPage() {
-  const collection = (await getCollectionByHandle('premium-collection')) || (await getCollectionByHandle('all'))
+export default async function KidsCollectionPage() {
+  const collection = (await getCollectionByHandle('kids-collection')) || (await getCollectionByHandle('slim-fit')) || (await getCollectionByHandle('all'))
   const products = collection?.products || []
   const breadcrumbs = [{ id: 1, name: 'Home', href: '/' }]
 
   return (
     <div className="container">
       <div>
-        <Breadcrumb breadcrumbs={breadcrumbs} currentPage={'Premium Collection'} className="py-3.5" />
+        <Breadcrumb breadcrumbs={breadcrumbs} currentPage={'Kids Collection'} className="py-3.5" />
         <Divider />
         <main className="">
           <div className="flex flex-col items-center py-14 text-center lg:py-20">
@@ -31,9 +31,9 @@ export default async function PremiumCollectionPage() {
             <Heading bigger level={1} className="mt-5">
               <span data-slot="dim">Collection</span>
               <br />
-              <span data-slot="italic" className="underline">Premium Collection</span>
+              <span data-slot="italic" className="underline">Kids Collection</span>
             </Heading>
-            <Text className="mt-5 max-w-xl">Elevated fabrics and refined details.</Text>
+            <Text className="mt-5 max-w-xl">Modern fits and comfort for kids.</Text>
           </div>
 
           <div className="flex flex-wrap justify-between gap-4">
@@ -51,7 +51,7 @@ export default async function PremiumCollectionPage() {
             <section>
               <div className="grid grid-cols-1 gap-y-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-3 lg:gap-x-7 xl:grid-cols-4">
                 {products.map((product) => (
-                  <ProductCard key={product.id} product={product} showVendor={true} labelOverride="PREMIUM" />
+                  <ProductCard key={product.id} product={product} showVendor={true} labelOverride="KIDS" />
                 ))}
               </div>
               <Pagination className="mx-auto mt-14 sm:mt-20">

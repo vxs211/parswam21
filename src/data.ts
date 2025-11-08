@@ -670,9 +670,9 @@ export async function getFashionCollections() {
   return [
     {
       id: '1',
-      title: 'Relaxed Fit',
-      handle: 'relaxed-fit',
-      description: 'Comfortable relaxed-fit jeans with extra room. Perfect for casual everyday wear.',
+      title: 'Men Collection',
+      handle: 'men-collection',
+      description: 'Premium men\'s jeans with perfect fit. Timeless styles for every occasion.',
       updatedAt: '2025-05-06T10:00:00-04:00',
       image: '/images/fashion/Parshwam-1.webp',
       products: products.slice(0, 5),
