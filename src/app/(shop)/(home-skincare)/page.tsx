@@ -24,7 +24,7 @@ export default async function Home() {
       <HeroSection3 />
 
       <div className="container mt-16 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 justify-items-center place-content-center gap-10 lg:gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 place-content-center justify-items-center gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <TiltedCard
             imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
             altText="Kendrick Lamar - GNX Album Cover"
@@ -87,6 +87,7 @@ export default async function Home() {
           />
         </div>
       </div>
+
       <SectionCollectionCarousel className="container mt-20 sm:mt-28 lg:mt-28" groupCollections={groupCollections} />
       {collections
         ?.filter((_, i) => i < 3)
