@@ -8,6 +8,7 @@ import CartIconBtn from './cart-icon-btn'
 import HamburgerIconMenu from './hamburger-icon-menu'
 import SearchIconPopover from './search-icon-popover'
 import ShopDropdown from './shop-dropdown'
+import NewArrivalsDropdown from './new-arrivals-dropdown'
 import UserIconPopover from './user-icon-popover'
 
 interface HeaderProps {
@@ -47,7 +48,7 @@ const Header = ({ className, hasBottomBorder = true, variant = 'default' }: Head
           <div className="hidden lg:flex lg:gap-x-8">
             <TextLink href="/">Home</TextLink>
             <ShopDropdown />
-            <TextLink href="/collections/new-arrivals">New Arrivals</TextLink>
+            <NewArrivalsDropdown />
             <TextLink href="/fit-guide">Fit Guide</TextLink>
           </div>
 

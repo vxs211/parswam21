@@ -101,44 +101,43 @@ const ShopDropdown = ({ className }: ShopDropdownProps) => {
             style={{ top: menuTop + 8 }}
           >
             <div className="mx-auto w-full max-w-6xl overflow-hidden rounded-2xl bg-white font-sans shadow-2xl ring-1 ring-black/5 dark:bg-zinc-900 dark:ring-white/10">
-              <div className="p-4 sm:p-8">
-                <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
+              <div className="p-4 sm:p-6 lg:p-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-4">
                   {jeansCategories.map((category, index) => (
                     <motion.div
                       key={category.name}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{
-                        duration: 0.3,
-                        delay: index * 0.1,
+                        duration: 0.25,
+                        delay: index * 0.06,
                         ease: 'easeOut',
                       }}
                     >
                       <Link
                         href={category.href}
-                        className="group block overflow-hidden rounded-lg bg-zinc-50 transition-all duration-300 hover:bg-zinc-100 hover:shadow-md dark:bg-zinc-800 dark:hover:bg-zinc-700"
+                        className="group flex h-full flex-col overflow-hidden rounded-lg bg-zinc-50 transition-all duration-300 hover:bg-zinc-100 hover:shadow-sm dark:bg-zinc-800 dark:hover:bg-zinc-700"
                         onClick={() => setIsOpen(false)}
                       >
                         <div className="relative overflow-hidden rounded-lg">
-                          {/* Larger image area */}
                           <div className="aspect-[3/4] w-full overflow-hidden">
                             <div
-                              className="h-full w-full bg-cover bg-center"
+                              className="h-full w-full bg-contain bg-no-repeat bg-center"
                               style={{ backgroundImage: `url(${category.image})` }}
                             />
                           </div>
 
-                          {/* Title over image */}
-                          <div className="pointer-events-none absolute inset-x-0 bottom-3 flex justify-center px-4">
-                            <h3 className="text-center font-sans text-base font-bold tracking-[0.02em] text-zinc-950 uppercase sm:text-lg">
-                              {category.name}
-                            </h3>
+                          <div className="pointer-events-none absolute inset-x-0 bottom-2 sm:bottom-3 flex justify-center px-2 sm:px-3">
+                            <span className="inline-block rounded bg-white/85 px-2 pt-1.5 pb-1 shadow-sm">
+                              <h3 className="text-center font-sans text-xs font-bold tracking-[0.02em] text-zinc-950 uppercase sm:text-sm lg:text-sm">
+                                {category.name}
+                              </h3>
+                            </span>
                           </div>
                         </div>
 
-                        {/* Description under image (same site font and black text) */}
-                        <div className="p-3 sm:p-4">
-                          <p className="mt-1 font-sans text-xs/5 text-zinc-950 sm:text-sm/6">{category.description}</p>
+                        <div className="mt-auto p-2 sm:p-3">
+                          <p className="mt-1 font-sans text-[10px]/4 text-zinc-950 sm:text-xs/5">{category.description}</p>
                         </div>
                       </Link>
                     </motion.div>

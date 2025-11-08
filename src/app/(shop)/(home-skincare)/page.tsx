@@ -1,12 +1,12 @@
 import { Divider } from '@/components/divider'
+import GridMotion from '@/components/GridMotion'
+import LogoLoop from '@/components/logoloop'
 import FeatureSection2 from '@/components/sections/feature-section-2'
 import FeatureSection3 from '@/components/sections/feature-section-3'
 import HeroSection3 from '@/components/sections/hero-section-3'
-import GridMotion from '@/components/GridMotion'
 import SectionCollectionCarousel from '@/components/sections/section-collection-carousel'
 import SectionProductCarousel from '@/components/sections/section-product-carousel'
 import TiltedCard from '@/components/tiltedcards'
-import LogoLoop from '@/components/logoloop'
 import { getCollections, getGroupCollections } from '@/data'
 import clsx from 'clsx'
 import { Metadata } from 'next'
@@ -169,13 +169,13 @@ export default async function Home() {
       <div className="container mt-20 sm:mt-28 lg:mt-32">
         <div className="space-y-8">
           {/* First line - left to right */}
-          <LogoLoop 
+          <LogoLoop
             logos={[
               { src: '/clients/Untitled-design-21-4.png' },
               { src: '/clients/Untitled-design-23-3.png' },
               { src: '/clients/Untitled-design-24-4.png' },
               { src: '/clients/Untitled-design-25.png' },
-            ]} 
+            ]}
             speed={40}
             direction="left"
             logoHeight={60}
@@ -186,16 +186,16 @@ export default async function Home() {
             scaleOnHover
             ariaLabel="Our Clients"
           />
-  
+
           {/* Second line - right to left */}
-          <LogoLoop 
+          <LogoLoop
             logos={[
               { src: '/clients/Untitled-design-26.png' },
               { src: '/clients/Untitled-design-27.png' },
               { src: '/clients/Untitled-design-28.png' },
               { src: '/clients/Untitled-design-29.png' },
-              { src: '/clients/Untitled-design-31.png' }
-            ]} 
+              { src: '/clients/Untitled-design-31.png' },
+            ]}
             speed={40}
             direction="right"
             logoHeight={60}
