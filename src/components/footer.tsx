@@ -101,7 +101,7 @@ export default function Footer({ className }: FooterProps) {
           <div className="flex max-w-xs flex-col gap-4 lg:flex-1">
             <Link href="/" className="-m-1.5 w-fit p-1.5">
               <span className="sr-only">ParsWam</span>
-              <Image src="/images/parswamB.svg" alt="ParsWam Logo" width={160} height={48} priority />
+              <Image src="/images/PAR.svg" alt="ParsWam Logo" width={160} height={48} priority />
             </Link>
             <p className="text-xs uppercase leading-6 tracking-[0.12em] text-zinc-600">
               Established in 2008, we&apos;ve evolved from a humble fashion manufacturer into a leading trendsetter —

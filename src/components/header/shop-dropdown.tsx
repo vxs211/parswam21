@@ -8,25 +8,25 @@ import { useEffect, useRef, useState } from 'react'
 
 const jeansCategories = [
   {
-    name: 'Mens Jeans',
+    name: "Men's Collection",
     href: '/collections/mens-jeans',
     description: 'Premium quality jeans for men',
     image: '/images/fashion/Parshwam-1-1.webp',
   },
   {
-    name: 'Womens Jeans',
+    name: "Jeans Collection",
     href: '/collections/womens-jeans',
     description: 'Stylish and comfortable jeans for women',
     image: '/images/fashion/Parshwam-2-2.webp',
   },
   {
-    name: 'Kids Jeans',
+    name: "Kid's Collection",
     href: '/collections/kids-jeans',
     description: 'Durable and fun jeans for children',
     image: '/images/fashion/Parshwam-3-3.webp',
   },
   {
-    name: 'Cargo & Joggers',
+    name: 'Cotton Collection',
     href: '/collections/cargo-joggers',
     description: 'Casual cargo pants and joggers',
     image: '/images/fashion/Parshwam-4-4.webp',

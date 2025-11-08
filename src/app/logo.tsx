@@ -5,7 +5,7 @@ export function Logo({ className, ...props }: React.ComponentPropsWithoutRef<'di
   return (
     <div className={clsx(className)} {...props}>
       <Image 
-        src="/images/parswamB.svg" 
+        src="/images/PAR.svg" 
         alt="ParsWam Logo" 
         width={160} 
         height={48}

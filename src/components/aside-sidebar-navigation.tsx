@@ -13,6 +13,13 @@ const demo_pages_menu = [
   { name: 'Coming soon', href: '#' },
 ]
 
+const shop_menu = [
+  { name: "Men's Collection", href: '/collections/mens-jeans' },
+  { name: 'Jeans Collection', href: '/collections/womens-jeans' },
+  { name: "Kid's Collection", href: '/collections/kids-jeans' },
+  { name: 'Cotton Collection', href: '/collections/cargo-joggers' },
+]
+
 interface Props {
   className?: string
 }
@@ -49,12 +56,29 @@ const AsideSidebarNavigation = ({ className }: Props) => {
                 </DisclosurePanel>
               </Disclosure>
 
-              <TextLink
-                href="/collections/all"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium hover:bg-zinc-50"
-              >
-                Shop
-              </TextLink>
+              <Disclosure as="div" className="-mx-3">
+                <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 ps-3 pe-3.5 text-base/7 font-medium hover:bg-zinc-50">
+                  <Text>Shop</Text>
+                  <HugeiconsIcon
+                    className="group-data-open:rotate-180"
+                    icon={ArrowDown01Icon}
+                    size={24}
+                    strokeWidth={1}
+                  />
+                </DisclosureButton>
+                <DisclosurePanel className="ps-6 pe-3 pb-2">
+                  {shop_menu.map((item) => (
+                    <DisclosureButton
+                      key={item.name}
+                      as={TextLink}
+                      href={item.href}
+                      className="block rounded-lg py-1 text-sm/7 font-medium hover:bg-zinc-50"
+                    >
+                      {item.name}
+                    </DisclosureButton>
+                  ))}
+                </DisclosurePanel>
+              </Disclosure>
               <TextLink
                 href="/about-us"
                 className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium hover:bg-zinc-50"
