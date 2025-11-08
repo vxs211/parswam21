@@ -1,10 +1,7 @@
 {
-  "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js",
-  "/(shop)/(other-pages)/new-arrivals/page": "app/(shop)/(other-pages)/new-arrivals/page.js",
-  "/(shop)/(other-pages)/featured-collection/page": "app/(shop)/(other-pages)/featured-collection/page.js",
   "/(shop)/(other-pages)/sale/page": "app/(shop)/(other-pages)/sale/page.js",
-  "/(shop)/(other-pages)/premium-collection/page": "app/(shop)/(other-pages)/premium-collection/page.js",
-  "/(shop)/(other-pages)/online-exclusive/page": "app/(shop)/(other-pages)/online-exclusive/page.js",
+  "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js",
+  "/(shop)/(other-pages)/featured-collection/page": "app/(shop)/(other-pages)/featured-collection/page.js",
   "/(shop)/(other-pages)/best-selling/page": "app/(shop)/(other-pages)/best-selling/page.js",
-  "/(shop)/(other-pages)/collections/[handle]/page": "app/(shop)/(other-pages)/collections/[handle]/page.js"
+  "/(shop)/(other-pages)/new-arrivals/page": "app/(shop)/(other-pages)/new-arrivals/page.js"
 }

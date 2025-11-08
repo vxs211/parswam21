@@ -73,7 +73,7 @@ export default function ProductCard({ product, className, imageRatio = 'aspect-3
             <span className="absolute inset-0"></span>
             {title}
           </TextLink>
-          <Text className="">₹{price.toFixed(2)}</Text>
+          <Text className="">₹{(price * 10).toFixed(1)}</Text>
         </div>
         <Text className="mt-0.5 text-xs text-zinc-500">{color ?? size ?? ''}</Text>
       </div>
