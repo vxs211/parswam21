@@ -521,6 +521,9 @@
   .z-50 {
     z-index: 50;
   }
+  .z-\[1\] {
+    z-index: 1;
+  }
   .z-\[2\] {
     z-index: 2;
   }
@@ -720,6 +723,9 @@
   .-mr-1 {
     margin-right: calc(var(--spacing) * -1);
   }
+  .mr-\[var\(--logoloop-gap\)\] {
+    margin-right: var(--logoloop-gap);
+  }
   .-mb-3 {
     margin-bottom: calc(var(--spacing) * -3);
   }
@@ -915,6 +921,9 @@
   .h-\[150px\] {
     height: 150px;
   }
+  .h-\[var\(--logoloop-logoHeight\)\] {
+    height: var(--logoloop-logoHeight);
+  }
   .h-auto {
     height: auto;
   }
@@ -995,6 +1004,9 @@
   }
   .w-\[2\.25rem\] {
     width: 2.25rem;
+  }
+  .w-\[clamp\(24px\,8\%\,120px\)\] {
+    width: clamp(24px, 8%, 120px);
   }
   .w-auto {
     width: auto;
@@ -1608,6 +1620,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .overflow-visible {
+    overflow: visible;
+  }
   .overflow-x-auto {
     overflow-x: auto;
   }
@@ -1625,6 +1640,9 @@
   }
   .overscroll-contain {
     overscroll-behavior: contain;
+  }
+  .rounded {
+    border-radius: 0.25rem;
   }
   .rounded-\(--avatar-radius\) {
     border-radius: var(--avatar-radius);
@@ -1986,6 +2004,12 @@
       background-color: color-mix(in oklab, var(--color-zinc-950) 2.5%, transparent);
     }
   }
+  .bg-\[linear-gradient\(to_left\,var\(--logoloop-fadeColor\,var\(--logoloop-fadeColorAuto\)\)_0\%\,rgba\(0\,0\,0\,0\)_100\%\)\] {
+    background-image: linear-gradient(to left,var(--logoloop-fadeColor,var(--logoloop-fadeColorAuto)) 0%,rgba(0,0,0,0) 100%);
+  }
+  .bg-\[linear-gradient\(to_right\,var\(--logoloop-fadeColor\,var\(--logoloop-fadeColorAuto\)\)_0\%\,rgba\(0\,0\,0\,0\)_100\%\)\] {
+    background-image: linear-gradient(to right,var(--logoloop-fadeColor,var(--logoloop-fadeColorAuto)) 0%,rgba(0,0,0,0) 100%);
+  }
   .bg-cover {
     background-size: cover;
   }
@@ -2147,6 +2171,9 @@
   }
   .py-\[calc\(--spacing\(2\.5\)-1px\)\] {
     padding-block: calc(calc(var(--spacing) * 2.5) - 1px);
+  }
+  .py-\[calc\(var\(--logoloop-logoHeight\)\*0\.1\)\] {
+    padding-block: calc(var(--logoloop-logoHeight) * 0.1);
   }
   .ps-3 {
     padding-inline-start: calc(var(--spacing) * 3);
@@ -2423,9 +2450,16 @@
   .text-\[48px\] {
     font-size: 48px;
   }
+  .text-\[length\:var\(--logoloop-logoHeight\)\] {
+    font-size: var(--logoloop-logoHeight);
+  }
   .leading-6 {
     --tw-leading: calc(var(--spacing) * 6);
     line-height: calc(var(--spacing) * 6);
+  }
+  .leading-\[1\] {
+    --tw-leading: 1;
+    line-height: 1;
   }
   .leading-none {
     --tw-leading: 1;
@@ -2652,6 +2686,9 @@
     --tw-numeric-spacing: tabular-nums;
     font-variant-numeric: var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,);
   }
+  .no-underline {
+    text-decoration-line: none;
+  }
   .underline {
     text-decoration-line: underline;
   }
@@ -2832,6 +2869,10 @@
     --tw-duration: 1000ms;
     transition-duration: 1000ms;
   }
+  .ease-\[cubic-bezier\(0\.4\,0\,0\.2\,1\)\] {
+    --tw-ease: cubic-bezier(0.4,0,0.2,1);
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -2839,6 +2880,10 @@
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+  }
+  .ease-linear {
+    --tw-ease: linear;
+    transition-timing-function: linear;
   }
   .ease-out {
     --tw-ease: var(--ease-out);
@@ -3322,6 +3367,15 @@
   }
   .\[--gutter\:--spacing\(8\)\] {
     --gutter: calc(var(--spacing) * 8);
+  }
+  .\[--logoloop-fadeColorAuto\:\#ffffff\] {
+    --logoloop-fadeColorAuto: #ffffff;
+  }
+  .\[--logoloop-gap\:32px\] {
+    --logoloop-gap: 32px;
+  }
+  .\[--logoloop-logoHeight\:28px\] {
+    --logoloop-logoHeight: 28px;
   }
   .\[--radio-checked-bg\:var\(--color-amber-400\)\] {
     --radio-checked-bg: var(--color-amber-400);
@@ -3902,6 +3956,12 @@
   .\[--switch\:white\] {
     --switch: white;
   }
+  .\[-webkit-user-drag\:none\] {
+    -webkit-user-drag: none;
+  }
+  .\[image-rendering\:-webkit-optimize-contrast\] {
+    image-rendering: -webkit-optimize-contrast;
+  }
   .\[motion-reduce\:transition-none\] {
     motion-reduce: transition-none;
   }
@@ -4014,6 +4074,16 @@
     &:is(:where(.group\/collection):hover *) {
       @media (hover: hover) {
         opacity: 100%;
+      }
+    }
+  }
+  .group-hover\/item\:scale-120 {
+    &:is(:where(.group\/item):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 120%;
+        --tw-scale-y: 120%;
+        --tw-scale-z: 120%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
       }
     }
   }
@@ -4937,6 +5007,13 @@
       }
     }
   }
+  .hover\:opacity-80 {
+    &:hover {
+      @media (hover: hover) {
+        opacity: 80%;
+      }
+    }
+  }
   .hover\:shadow-md {
     &:hover {
       @media (hover: hover) {
@@ -5042,10 +5119,26 @@
       }
     }
   }
+  .focus-visible\:outline {
+    &:focus-visible {
+      outline-style: var(--tw-outline-style);
+      outline-width: 1px;
+    }
+  }
   .focus-visible\:outline-0 {
     &:focus-visible {
       outline-style: var(--tw-outline-style);
       outline-width: 0px;
+    }
+  }
+  .focus-visible\:outline-offset-2 {
+    &:focus-visible {
+      outline-offset: 2px;
+    }
+  }
+  .focus-visible\:outline-current {
+    &:focus-visible {
+      outline-color: currentcolor;
     }
   }
   .focus-visible\:outline-none {
@@ -6172,6 +6265,11 @@
   .supports-\[grid-template-columns\:subgrid\]\:grid-cols-subgrid {
     @supports (grid-template-columns:subgrid) {
       grid-template-columns: subgrid;
+    }
+  }
+  .motion-reduce\:transform-none {
+    @media (prefers-reduced-motion: reduce) {
+      transform: none;
     }
   }
   .motion-reduce\:transition-none {
@@ -8586,6 +8684,11 @@
       @supports (color: color-mix(in lab, red, red)) {
         --checkbox-checked-border: color-mix(in oklab, var(--color-zinc-950) 15%, transparent);
       }
+    }
+  }
+  .dark\:\[--logoloop-fadeColorAuto\:\#0b0b0b\] {
+    &:where(.dark, .dark *) {
+      --logoloop-fadeColorAuto: #0b0b0b;
     }
   }
   .dark\:\[--radio-checked-bg\:var\(--color-white\)\] {
