@@ -8,28 +8,28 @@ import { useEffect, useRef, useState } from 'react'
 
 const jeansCategories = [
   {
-    name: "Men's Collection",
-    href: '/collections/mens-jeans',
-    description: 'Premium quality jeans for men',
-    image: '/images/fashion/Parshwam-1-1.webp',
+    name: 'Relaxed Fit',
+    href: '/collections/relaxed-fit',
+    description: 'Comfortable relaxed-fit jeans with extra room.',
+    image: '/images/fashion/Parshwam-1.webp',
   },
   {
-    name: "Jeans Collection",
-    href: '/collections/womens-jeans',
-    description: 'Stylish and comfortable jeans for women',
-    image: '/images/fashion/Parshwam-2-2.webp',
+    name: 'Slim Fit',
+    href: '/collections/slim-fit',
+    description: 'Modern slim-fit jeans with a tailored look.',
+    image: '/images/fashion/Parshwam-2.webp',
   },
   {
-    name: "Kid's Collection",
-    href: '/collections/kids-jeans',
-    description: 'Durable and fun jeans for children',
-    image: '/images/fashion/Parshwam-3-3.webp',
+    name: 'Bootcut',
+    href: '/collections/bootcut',
+    description: 'Trendy bootcut for every occasion, from casual to formal.',
+    image: '/images/fashion/Parshwam-5.webp',
   },
   {
-    name: 'Cotton Collection',
-    href: '/collections/cargo-joggers',
-    description: 'Casual cargo pants and joggers',
-    image: '/images/fashion/Parshwam-4-4.webp',
+    name: 'Skinny Jeans',
+    href: '/collections/skinny-jeans',
+    description: 'Elegant skinny jeans for every season.',
+    image: '/images/fashion/Parshwam-4.webp',
   },
 ]
 
@@ -97,12 +97,12 @@ const ShopDropdown = ({ className }: ShopDropdownProps) => {
             animate={isPointerFine ? { opacity: 1, y: 0, scale: 1 } : { opacity: 1, y: 0, scale: 1 }}
             exit={isPointerFine ? { opacity: 0, y: -10, scale: 0.98 } : { opacity: 0, y: -6, scale: 1 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="fixed left-0 right-0 z-50 px-4 sm:px-6"
+            className="fixed right-0 left-0 z-50 px-4 sm:px-6"
             style={{ top: menuTop + 8 }}
           >
             <div className="mx-auto w-full max-w-6xl overflow-hidden rounded-2xl bg-white font-sans shadow-2xl ring-1 ring-black/5 dark:bg-zinc-900 dark:ring-white/10">
               <div className="p-4 sm:p-8">
-                <div className="grid grid-cols-2 gap-4 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
                   {jeansCategories.map((category, index) => (
                     <motion.div
                       key={category.name}
@@ -130,7 +130,7 @@ const ShopDropdown = ({ className }: ShopDropdownProps) => {
 
                           {/* Title over image */}
                           <div className="pointer-events-none absolute inset-x-0 bottom-3 flex justify-center px-4">
-                            <h3 className="font-sans font-bold text-zinc-950 text-base sm:text-lg text-center uppercase tracking-[0.02em]">
+                            <h3 className="text-center font-sans text-base font-bold tracking-[0.02em] text-zinc-950 uppercase sm:text-lg">
                               {category.name}
                             </h3>
                           </div>
@@ -138,9 +138,7 @@ const ShopDropdown = ({ className }: ShopDropdownProps) => {
 
                         {/* Description under image (same site font and black text) */}
                         <div className="p-3 sm:p-4">
-                          <p className="mt-1 text-xs/5 sm:text-sm/6 font-sans text-zinc-950">
-                            {category.description}
-                          </p>
+                          <p className="mt-1 font-sans text-xs/5 text-zinc-950 sm:text-sm/6">{category.description}</p>
                         </div>
                       </Link>
                     </motion.div>

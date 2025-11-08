@@ -10,15 +10,21 @@ import { HugeiconsIcon } from '@hugeicons/react'
 
 const filters = [
   {
-    id: 'category',
-    name: 'Category',
+    id: 'subcategory',
+    name: 'Sub Category',
     options: [
-      { value: 'tees', label: 'Tees', checked: true },
-      { value: 'crewnecks', label: 'Crewnecks' },
-      { value: 'hats', label: 'Hats' },
-      { value: 'bundles', label: 'Bundles' },
-      { value: 'carry', label: 'Carry' },
-      { value: 'objects', label: 'Objects' },
+      { value: 'ankle-fit', label: 'ANKLE FIT', checked: true },
+      { value: 'loose-fit', label: 'LOOSE FIT' },
+      { value: 'straight-fit', label: 'STRAIGHT FIT' },
+      { value: 'regular-comfort-fit', label: 'REGULAR & COMFORT FIT' },
+      { value: 'korean-fit', label: 'KOREAN FIT' },
+      { value: 'traveller-fit', label: 'TRAVELLER FIT' },
+      { value: 'baggy-fit', label: 'BAGGY FIT' },
+      { value: 'boot-cut', label: 'BOOT CUT' },
+      { value: 'wide-leg-super-baggy', label: 'WIDE LEG ( SUPPER BAGGY )' },
+      { value: 'cargo-pants', label: 'CARGO PANTS' },
+      { value: 'joggers-pants', label: 'JOGGERS PANTS' },
+      { value: 'shorts', label: 'SHORTS' },
     ],
   },
   {

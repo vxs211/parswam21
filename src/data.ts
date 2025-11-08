@@ -697,8 +697,8 @@ export async function getFashionCollections() {
     },
     {
       id: '4',
-      title: 'skinny jeans',
-      handle: 'skinny jeans',
+      title: 'Skinny Jeans',
+      handle: 'skinny-jeans',
       description: 'Elegant skinny jeans for every season, combining warmth and style. Find your perfect outerwear.',
       updatedAt: '2025-05-06T10:00:00-04:00',
       image: '/images/fashion/Parshwam-4.webp',
