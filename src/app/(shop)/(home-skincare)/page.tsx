@@ -5,6 +5,7 @@ import HeroSection3 from '@/components/sections/hero-section-3'
 import SectionCollectionCarousel from '@/components/sections/section-collection-carousel'
 import SectionProductCarousel from '@/components/sections/section-product-carousel'
 import TiltedCard from '@/components/tiltedcards'
+import LogoLoop from '@/components/logoloop'
 import { getCollections, getGroupCollections } from '@/data'
 import clsx from 'clsx'
 import { Metadata } from 'next'
@@ -130,6 +131,29 @@ export default async function Home() {
           alt: 'fashion-feature-1',
         }}
       />
+      {/* Logos loop above footer */}
+      <div className="container mt-20 sm:mt-28 lg:mt-32">
+        <LogoLoop
+          logos={[
+            { src: '/images/logo-clouds-1.svg', alt: 'Logo 1', href: '#' },
+            { src: '/images/logo-clouds-2.svg', alt: 'Logo 2', href: '#' },
+            { src: '/images/logo-clouds-3.svg', alt: 'Logo 3', href: '#' },
+            { src: '/images/logo-clouds-4.svg', alt: 'Logo 4', href: '#' },
+            { src: '/images/logo-clouds-5.svg', alt: 'Logo 5', href: '#' },
+            { src: '/parswam.svg', alt: 'Parswam', href: '#' },
+            { src: '/images/logo.png', alt: 'Logo', href: '#' }
+          ]}
+          speed={120}
+          direction="left"
+          logoHeight={40}
+          gap={40}
+          pauseOnHover
+          scaleOnHover
+          fadeOut
+          fadeOutColor="#ffffff"
+          ariaLabel="Technology partners"
+        />
+      </div>
       <div className="container mt-24 sm:mt-28 lg:mt-40">
         <Divider />
       </div>
