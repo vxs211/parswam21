@@ -797,6 +797,26 @@ export async function getCollectionByHandle(handle: string) {
       products: (await getFashionProducts()).slice(0, 7),
     }
   }
+
+  // Map group/category handles to existing single collections
+  const groupToCollectionHandle: Record<string, string> = {
+    // Pretty slugs used by the Shop menu
+    'men-collection': 'relaxed-fit',
+    'mens-collection': 'relaxed-fit',
+    'kids-collection': 'slim-fit',
+    'denim-collection': 'bootcut',
+    'cotton-collection': 'skinny-jeans',
+    'mens-jeans': 'relaxed-fit',
+    'kids-jeans': 'slim-fit',
+    'denim-jeans': 'bootcut',
+    'cotton-pants': 'skinny-jeans',
+  }
+  const mapped = groupToCollectionHandle[handle]
+  if (mapped) {
+    const allCollections = await getCollections('all')
+    return allCollections?.find((collection) => collection?.handle === mapped)
+  }
+
   const allCollections = await getCollections('all')
   return allCollections?.find((collection) => collection?.handle === handle)
 }

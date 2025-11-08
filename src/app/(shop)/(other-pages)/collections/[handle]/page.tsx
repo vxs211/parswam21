@@ -37,7 +37,31 @@ export default async function Collection({ params }: { params: Promise<{ handle:
   return (
     <div className="container">
       <div>
-        <Breadcrumb breadcrumbs={breadcrumbs} currentPage={collection.title} className="py-3.5" />
+        <Breadcrumb
+          breadcrumbs={breadcrumbs}
+          currentPage={(() => {
+            const map: Record<string, string> = {
+              // Base handles
+              'relaxed-fit': 'Men Collection',
+              'slim-fit': 'Kids Collection',
+              'bootcut': 'Denim Collection',
+              'skinny-jeans': 'Cotton Collection',
+              // Pretty/group handles
+              'men-collection': 'Men Collection',
+              'mens-collection': 'Men Collection',
+              'kids-collection': 'Kids Collection',
+              'denim-collection': 'Denim Collection',
+              'cotton-collection': 'Cotton Collection',
+              // Legacy
+              'mens-jeans': 'Men Collection',
+              'kids-jeans': 'Kids Collection',
+              'denim-jeans': 'Denim Collection',
+              'cotton-pants': 'Cotton Collection',
+            }
+            return map[handle] ?? collection.title
+          })()}
+          className="py-3.5"
+        />
 
         <Divider />
 
@@ -48,7 +72,27 @@ export default async function Collection({ params }: { params: Promise<{ handle:
               <span data-slot="dim">Collection</span>
               <br />
               <span data-slot="italic" className="underline">
-                {collection.title}
+                {(() => {
+                  const titleMap: Record<string, string> = {
+                    // Base collection handles
+                    'relaxed-fit': 'Mens',
+                    'slim-fit': 'Kids',
+                    'bootcut': 'Denim',
+                    'skinny-jeans': 'Cotton',
+                    // Pretty/group handles
+                    'men-collection': 'Mens',
+                    'mens-collection': 'Mens',
+                    'kids-collection': 'Kids',
+                    'denim-collection': 'Denim',
+                    'cotton-collection': 'Cotton',
+                    // Legacy handles
+                    'mens-jeans': 'Mens',
+                    'kids-jeans': 'Kids',
+                    'denim-jeans': 'Denim',
+                    'cotton-pants': 'Cotton',
+                  }
+                  return titleMap[handle] ?? collection.title
+                })()}
               </span>
             </Heading>
             <Text className="mt-5 max-w-xl">{collection.description}</Text>
