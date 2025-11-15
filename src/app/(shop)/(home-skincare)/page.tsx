@@ -1,3 +1,4 @@
+import CircularGallery from '@/components/CircularGallery/index'
 import { Divider } from '@/components/divider'
 import LogoLoop from '@/components/logoloop'
 import FeatureSection2 from '@/components/sections/feature-section-2'
@@ -22,7 +23,9 @@ export default async function Home() {
   return (
     <div>
       <HeroSection3 />
-
+      <div style={{ height: '80vh', position: 'relative' }}>
+        <CircularGallery bend={0} textColor="#111827" borderRadius={0.05} scrollEase={0.02} />
+      </div>
       {/* GridMotion section removed as requested */}
 
       {/* TiltedCard section removed as requested */}

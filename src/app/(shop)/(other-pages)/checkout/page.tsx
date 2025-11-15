@@ -19,6 +19,11 @@ export const metadata: Metadata = {
 
 export default async function Page() {
   const products = await getCartProducts()
+  const subtotal = products.reduce((sum, p) => sum + parseFloat(String(p.price).replace(/[^\d.]/g, '')), 0)
+  const shipping = 0
+  const taxes = 0
+  const total = subtotal + shipping + taxes
+  const formatINR = (n: number) => `₹${n.toFixed(1)}`
 
   return (
     <div className="container">
@@ -179,19 +184,19 @@ export default async function Page() {
               <dl className="space-y-6 border-t border-zinc-200 px-4 py-6 sm:px-6">
                 <div className="flex items-center justify-between">
                   <dt className="text-sm uppercase">Subtotal</dt>
-                  <dd className="text-sm font-medium text-zinc-900">$64.00</dd>
+                  <dd className="text-sm font-medium text-zinc-900">{formatINR(subtotal)}</dd>
                 </div>
                 <div className="flex items-center justify-between">
                   <dt className="text-sm uppercase">Shipping</dt>
-                  <dd className="text-sm font-medium text-zinc-900">$5.00</dd>
+                  <dd className="text-sm font-medium text-zinc-900">{formatINR(shipping)}</dd>
                 </div>
                 <div className="flex items-center justify-between">
                   <dt className="text-sm uppercase">Taxes</dt>
-                  <dd className="text-sm font-medium text-zinc-900">$5.52</dd>
+                  <dd className="text-sm font-medium text-zinc-900">{formatINR(taxes)}</dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-zinc-200 pt-6">
                   <dt className="text-base font-medium uppercase">Total</dt>
-                  <dd className="text-base font-medium text-zinc-900">$75.52</dd>
+                  <dd className="text-base font-medium text-zinc-900">{formatINR(total)}</dd>
                 </div>
               </dl>
 

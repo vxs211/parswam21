@@ -21,65 +21,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(shop)/(other-pages)/layout.js"
     ],
-    "/(shop)/(other-pages)/collections/layout": [
+    "/(shop)/(other-pages)/checkout/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/collections/layout.js"
-    ],
-    "/(shop)/(other-pages)/collections/[handle]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/collections/[handle]/page.js"
-    ],
-    "/(shop)/(other-pages)/sale/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/sale/page.js"
-    ],
-    "/(shop)/(other-pages)/new-arrivals/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/new-arrivals/page.js"
-    ],
-    "/(shop)/(other-pages)/featured-collection/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/featured-collection/page.js"
+      "static/chunks/app/(shop)/(other-pages)/checkout/page.js"
     ],
     "/(shop)/(other-pages)/premium-collection/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(shop)/(other-pages)/premium-collection/page.js"
-    ],
-    "/(shop)/(other-pages)/online-exclusive/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/online-exclusive/page.js"
-    ],
-    "/(shop)/(other-pages)/best-selling/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/best-selling/page.js"
-    ],
-    "/(shop)/(other-pages)/denim-collection/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/denim-collection/page.js"
-    ],
-    "/(shop)/(other-pages)/men-collection/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/men-collection/page.js"
-    ],
-    "/(shop)/(other-pages)/kids-collection/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/kids-collection/page.js"
-    ],
-    "/(shop)/(other-pages)/orders/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/orders/page.js"
     ]
   }
 }
