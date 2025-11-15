@@ -642,7 +642,7 @@ class App {
     if (!this.isDown) return
     const x = isTouchEvent(e) && e.touches.length > 0 ? e.touches[0].clientX : (e as MouseEvent).clientX
     const distance = (this.start - x) * 0.6
-    this.scroll.target = this.scroll.position + distance
+    this.scroll.target = (this.scroll.position ?? this.scroll.current) + distance
     const anyEvent = e as any
     if (anyEvent && typeof anyEvent.preventDefault === 'function') {
       anyEvent.preventDefault()
