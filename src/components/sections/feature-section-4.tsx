@@ -6,32 +6,37 @@ import { Text } from '../text'
 const data = [
   {
     id: 1,
-    title: 'DESIGNED TO LAST',
-    description: 'These designs will last in your wardrobe, forever.',
+    title: 'MADE TO LAST',
+    description:
+      'Quality That Stays With You<br/>Our jeans are crafted with premium denim and durable stitching — designed to look great and last for years.',
     icon: AiIdeaIcon,
   },
   {
     id: 2,
-    title: 'PAN INDIA SHIPPING',
-    description: 'Cheap, Fast Shipping Available to your Doorstep.',
+    title: 'PAN-INDIA SHIPPING',
+    description:
+      'Fast Delivery, Anywhere<br/>Get your jeans delivered quickly and reliably across India, right to your doorstep.',
     icon: BoatIcon,
   },
   {
     id: 3,
-    title: '5 STAR CARE',
-    description: "We're here for you anytime, info@parswam.com",
+    title: '5-STAR SUPPORT',
+    description:
+      'Here Whenever You Need Us<br/>Questions about fit, size, or care? Our support team is always ready to help at info@parswam.com',
     icon: Mailbox01Icon,
   },
   {
     id: 4,
-    title: 'SHOPPAY & AFTERPAY',
-    description: 'Pay in 4 installments, no interest. No fees, no interest.',
+    title: 'EASY PAY',
+    description:
+      'Smooth & Secure Checkout<br/>Pay effortlessly using your preferred payment method — simple, fast, and hassle-free.',
     icon: CoinsDollarIcon,
   },
   {
     id: 5,
-    title: 'KIND TO PLANET',
-    description: "You're doing good for yourself, and the planet.",
+    title: 'EARTH-FRIENDLY DENIM',
+    description:
+      'Good for You & the Planet<br/>Our jeans are made with eco-conscious processes and sustainable materials, helping reduce environmental impact.',
     icon: Plant03Icon,
   },
 ]
@@ -55,7 +60,7 @@ const FeatureSection4 = ({ className }: FeatureSection4Props) => {
           <Text className="mt-2 font-medium">{item.title}</Text>
           <HugeiconsIcon icon={item.icon} size={40} className="mt-10 text-zinc-700 sm:mt-14" strokeWidth={1} />
           <Text
-            className="mt-4 line-clamp-3 text-zinc-500 normal-case"
+            className="mt-4 text-zinc-500 normal-case"
             dangerouslySetInnerHTML={{ __html: item.description }}
           ></Text>
         </div>

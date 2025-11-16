@@ -1,7 +1,4 @@
 {
   "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js",
-  "/(shop)/(other-pages)/sale/page": "app/(shop)/(other-pages)/sale/page.js",
-  "/(shop)/(other-pages)/featured-collection/page": "app/(shop)/(other-pages)/featured-collection/page.js",
-  "/(shop)/(other-pages)/checkout/page": "app/(shop)/(other-pages)/checkout/page.js",
-  "/(shop)/(other-pages)/settings/page": "app/(shop)/(other-pages)/settings/page.js"
+  "/(shop)/(other-pages)/products/[handle]/page": "app/(shop)/(other-pages)/products/[handle]/page.js"
 }

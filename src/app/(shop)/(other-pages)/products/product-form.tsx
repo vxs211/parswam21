@@ -81,7 +81,7 @@ export function ProductForm({ product }: { product: TProductItem }) {
                 <div
                   className={clsx(
                     'mt-2',
-                    optionName === 'Color' ? 'flex items-center gap-x-3' : 'grid grid-cols-3 gap-3 sm:grid-cols-6'
+                    optionName === 'Color' ? 'flex items-center gap-x-3' : 'flex flex-wrap items-center gap-3'
                   )}
                 >
                   {optionValues.map(({ name, swatch }, index) => {
@@ -166,8 +166,8 @@ function ProductOptionSwatch({
       <div
         className={clsx(
           inStock ? 'cursor-pointer focus:outline-hidden' : 'cursor-not-allowed opacity-25',
-          'flex items-center justify-center rounded-md bg-white px-3 py-3 hover:bg-zinc-50 data-focus:ring-offset-2 sm:flex-1',
-          isSelected ? 'ring-2 ring-zinc-900' : 'ring-1 ring-zinc-200'
+          'flex items-center justify-center rounded-md border bg-white px-4 py-2 text-xs hover:bg-zinc-50 sm:flex-1 sm:text-sm',
+          isSelected ? 'border-zinc-900 font-semibold text-zinc-900' : 'border-zinc-300 text-zinc-500'
         )}
         title={inStock ? name : 'Out of stock'}
         aria-disabled={!inStock}
@@ -180,7 +180,10 @@ function ProductOptionSwatch({
 
   return (
     <div
-      className={clsx('h-8 w-8 rounded-full', isSelected && 'ring-2 ring-slate-900 ring-offset-2')}
+      className={clsx(
+        'h-8 w-10 rounded-md border border-zinc-300',
+        isSelected && 'ring-2 ring-slate-900 ring-offset-2'
+      )}
       style={{
         backgroundColor: color || 'transparent',
       }}
