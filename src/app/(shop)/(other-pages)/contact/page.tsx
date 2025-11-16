@@ -119,7 +119,13 @@ const Page = () => {
                   <div className="mt-2 flex flex-wrap gap-4">
                     <div className="flex gap-x-6">
                       {socials.map((item) => (
-                        <Link key={item.name} href={item.href} className="text-zinc-600 hover:text-zinc-800">
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-zinc-600 hover:text-zinc-800"
+                        >
                           <span className="sr-only">{item.name}</span>
                           <item.icon aria-hidden="true" className="size-6" />
                         </Link>

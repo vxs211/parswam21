@@ -1,4 +1,5 @@
 import Aside from '@/components/aside'
+import LenisSmoothScroll from '@/components/lenis-smooth-scroll'
 import '@/styles/tailwind.css'
 import clsx from 'clsx'
 import type { Metadata } from 'next'
@@ -53,7 +54,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       )}
     >
       <body>
-        <Aside.Provider>{children}</Aside.Provider>
+        <LenisSmoothScroll>
+          <Aside.Provider>{children}</Aside.Provider>
+        </LenisSmoothScroll>
       </body>
     </html>
   )
