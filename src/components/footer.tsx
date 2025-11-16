@@ -19,10 +19,10 @@ const navigation = {
     { name: 'Career', href: '#' },
     { name: 'Become a Franchise', href: '#' },
     { name: 'B2B Inquiry', href: '#' },
-    { name: 'Our Story', href: '#' },
+    { name: 'Our Story', href: '/our-story' },
   ],
   help: [
-    { name: 'Order Status & Tracking', href: '#' },
+    { name: 'Order Status & Tracking', href: '/order-tracking' },
     { name: 'Contact Us', href: '/contact' },
     { name: 'Return & Exchange Policy', href: '/return-exchange-policy' },
     { name: 'Term & Condition', href: '/terms-and-conditions' },
