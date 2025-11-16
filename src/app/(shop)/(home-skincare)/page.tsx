@@ -1,4 +1,3 @@
-import CircularGallery from '@/components/CircularGallery/index'
 import { Divider } from '@/components/divider'
 import LogoLoop from '@/components/logoloop'
 import FeatureSection2 from '@/components/sections/feature-section-2'
@@ -8,13 +7,14 @@ import SectionCollectionCarousel from '@/components/sections/section-collection-
 import SectionProductCarousel from '@/components/sections/section-product-carousel'
 import { getCollections, getGroupCollections } from '@/data'
 import clsx from 'clsx'
-import { Metadata } from 'next'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Fashion',
   description:
     'Discover the latest trends in fashion and style with our curated collection of clothing, accessories, and more.',
 }
+
+// CreativeSlider is a client component and will render on the client boundary.
 
 export default async function Home() {
   let collections = await getCollections('fashion')
@@ -23,12 +23,6 @@ export default async function Home() {
   return (
     <div>
       <HeroSection3 />
-      <div style={{ height: '80vh', position: 'relative' }}>
-        <CircularGallery bend={0} textColor="#111827" borderRadius={0.05} scrollEase={0.02} />
-      </div>
-      {/* GridMotion section removed as requested */}
-
-      {/* TiltedCard section removed as requested */}
 
       <SectionCollectionCarousel className="container mt-20 sm:mt-28 lg:mt-28" groupCollections={groupCollections} />
       {collections

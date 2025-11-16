@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "background": "/full/1.jpg",
+    "link": "/men-collection",
+    "text": { "subtitle": "Men's Collection", "title": "Premium Denim" }
+  },
+  {
+    "id": 2,
+    "background": "/full/2.jpg",
+    "link": "/kids-collection",
+    "text": { "subtitle": "Kids Collection", "title": "Comfort & Style" }
+  },
+  {
+    "id": 3,
+    "background": "/full/3.jpg",
+    "link": "/denim-collection",
+    "text": { "subtitle": "Denim Collection", "title": "Timeless Fashion" }
+  },
+  {
+    "id": 4,
+    "background": "/full/4.jpg",
+    "link": "/cotton-collection",
+    "text": { "subtitle": "Cotton Collection", "title": "Natural Comfort" }
+  },
+  {
+    "id": 5,
+    "background": "/full/5.jpg",
+    "link": "/new-arrivals",
+    "text": { "subtitle": "New Arrivals", "title": "Latest Trends" }
+  }
+]

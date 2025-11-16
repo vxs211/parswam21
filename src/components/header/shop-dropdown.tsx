@@ -100,45 +100,82 @@ const ShopDropdown = ({ className }: ShopDropdownProps) => {
             className="fixed right-0 left-0 z-50 px-4 sm:px-6"
             style={{ top: menuTop + 8 }}
           >
-            <div className="mx-auto w-full max-w-6xl overflow-hidden rounded-2xl bg-white font-sans shadow-2xl ring-1 ring-black/5 dark:bg-zinc-900 dark:ring-white/10">
-              <div className="p-4 sm:p-6 lg:p-6">
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-4">
+            <div className="mx-auto w-full max-w-7xl overflow-hidden rounded-3xl bg-white/95 font-sans shadow-2xl ring-1 ring-black/5 backdrop-blur-xl dark:bg-zinc-900/95 dark:ring-white/10">
+              {/* Header Section */}
+              <div className="border-b border-zinc-100/50 bg-gradient-to-r from-zinc-50/50 to-white/50 px-6 py-4 dark:border-zinc-800/50 dark:from-zinc-900/50 dark:to-zinc-800/50">
+                <h2 className="text-lg font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+                  Shop Collections
+                </h2>
+                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                  Discover our premium denim and fashion collections
+                </p>
+              </div>
+
+              <div className="p-6 sm:p-8">
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
                   {jeansCategories.map((category, index) => (
                     <motion.div
                       key={category.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 24, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
                       transition={{
-                        duration: 0.25,
-                        delay: index * 0.06,
-                        ease: 'easeOut',
+                        duration: 0.4,
+                        delay: index * 0.08,
+                        ease: [0.25, 0.46, 0.45, 0.94],
                       }}
                     >
                       <Link
                         href={category.href}
-                        className="group flex h-full flex-col overflow-hidden rounded-lg bg-zinc-50 transition-all duration-300 hover:bg-zinc-100 hover:shadow-sm dark:bg-zinc-800 dark:hover:bg-zinc-700"
+                        className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-50 to-zinc-100/50 opacity-75 ring-1 ring-zinc-200/50 transition-all duration-500 hover:opacity-100 hover:shadow-xl hover:shadow-zinc-900/10 hover:ring-zinc-300/60 dark:from-zinc-800 dark:to-zinc-900/50 dark:ring-zinc-700/50 dark:hover:ring-zinc-600/60"
                         onClick={() => setIsOpen(false)}
                       >
-                        <div className="relative overflow-hidden rounded-lg">
-                          <div className="aspect-[3/4] w-full overflow-hidden">
+                        {/* Image Container with Enhanced Effects */}
+                        <div className="relative overflow-hidden rounded-2xl">
+                          <div className="aspect-[4/5] w-full overflow-hidden">
                             <div
-                              className="h-full w-full bg-contain bg-no-repeat bg-center"
+                              className="h-full w-full bg-cover bg-center bg-no-repeat brightness-[0.85] saturate-[0.9] transition-all duration-700 group-hover:scale-105 group-hover:brightness-100 group-hover:saturate-100"
                               style={{ backgroundImage: `url(${category.image})` }}
                             />
+                            {/* Gradient Overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-30" />
                           </div>
 
-                          <div className="pointer-events-none absolute inset-x-0 bottom-2 sm:bottom-3 flex justify-center px-2 sm:px-3">
-                            <span className="inline-block rounded bg-white/85 px-2 pt-1.5 pb-1 shadow-sm">
-                              <h3 className="text-center font-sans text-xs font-bold tracking-[0.02em] text-zinc-950 uppercase sm:text-sm lg:text-sm">
-                                {category.name}
-                              </h3>
-                            </span>
+                          {/* Enhanced Category Label */}
+                          <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center px-3">
+                            <div className="relative">
+                              <div className="absolute inset-0 rounded-full bg-white/20 backdrop-blur-md" />
+                              <span className="relative inline-block rounded-full bg-black/70 px-4 py-2 shadow-lg backdrop-blur-sm">
+                                <h3 className="text-center text-xs font-medium tracking-wide text-white uppercase sm:text-sm">
+                                  {category.name}
+                                </h3>
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Hover Indicator */}
+                          <div className="absolute top-3 right-3 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 shadow-lg backdrop-blur-sm">
+                              <svg
+                                className="h-4 w-4 text-zinc-700"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </div>
                           </div>
                         </div>
 
-                        <div className="mt-auto p-2 sm:p-3">
-                          <p className="mt-1 font-sans text-[10px]/4 text-zinc-950 sm:text-xs/5">{category.description}</p>
+                        {/* Enhanced Description */}
+                        <div className="flex-1 p-4">
+                          <p className="text-center text-xs leading-relaxed text-zinc-600 transition-colors duration-300 group-hover:text-zinc-800 sm:text-sm dark:text-zinc-400 dark:group-hover:text-zinc-200">
+                            {category.description}
+                          </p>
                         </div>
+
+                        {/* Subtle Border Animation */}
+                        <div className="absolute inset-0 rounded-2xl opacity-0 ring-2 ring-zinc-400/20 transition-opacity duration-300 group-hover:opacity-100" />
                       </Link>
                     </motion.div>
                   ))}
