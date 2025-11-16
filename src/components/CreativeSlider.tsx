@@ -70,7 +70,7 @@ export default function CreativeSlider({ data }: CreativeSliderProps) {
           onSwiper={setGalleryImg}
           spaceBetween={0}
           centeredSlides={true}
-          loopedSlides={4}
+          loop={true}
           mousewheel={true}
           speed={1500}
           navigation={{
@@ -127,7 +127,7 @@ export default function CreativeSlider({ data }: CreativeSliderProps) {
           slidesPerView={2}
           touchRatio={0.2}
           slideToClickedSlide={true}
-          loopedSlides={4}
+          loop={true}
           mousewheel={true}
           speed={1500}
           breakpoints={{
@@ -160,10 +160,10 @@ export default function CreativeSlider({ data }: CreativeSliderProps) {
               className="flex h-full max-h-full w-[45%] flex-shrink-0 items-center sm:w-full md:w-full lg:w-[45%]"
             >
               <div className="text px-4 text-white">
-                <h6 className="mb-2 text-sm uppercase tracking-wider opacity-70 md:text-base">
+                <h6 className="mb-2 text-sm tracking-wider uppercase opacity-70 md:text-base">
                   <span className="font-bold">{item.text.subtitle}</span>
                 </h6>
-                <h4 className="text-3xl font-light leading-tight md:text-5xl lg:text-6xl">{item.text.title}</h4>
+                <h4 className="text-3xl leading-tight font-light md:text-5xl lg:text-6xl">{item.text.title}</h4>
               </div>
             </SwiperSlide>
           ))}
@@ -171,18 +171,18 @@ export default function CreativeSlider({ data }: CreativeSliderProps) {
       </div>
 
       {/* Swiper Controls */}
-      <div className="half-slider-controls absolute bottom-20 left-0 right-0 z-30 flex items-center justify-center gap-8">
+      <div className="half-slider-controls absolute right-0 bottom-20 left-0 z-30 flex items-center justify-center gap-8">
         <div className="swiper-button-prev swiper-nav-ctrl flex cursor-pointer items-center gap-3 text-white transition-opacity hover:opacity-80">
           <div>
             <i className="fas fa-chevron-left text-xl"></i>
           </div>
           <div>
-            <span className="text-sm uppercase tracking-wide">Prev Slide</span>
+            <span className="text-sm tracking-wide uppercase">Prev Slide</span>
           </div>
         </div>
         <div className="swiper-button-next swiper-nav-ctrl flex cursor-pointer items-center gap-3 text-white transition-opacity hover:opacity-80">
           <div>
-            <span className="text-sm uppercase tracking-wide">Next Slide</span>
+            <span className="text-sm tracking-wide uppercase">Next Slide</span>
           </div>
           <div>
             <i className="fas fa-chevron-right text-xl"></i>
