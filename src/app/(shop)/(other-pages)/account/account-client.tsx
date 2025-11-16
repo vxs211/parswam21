@@ -84,13 +84,13 @@ export function AccountPageClient() {
                       <Checkbox name="remember" />
                       <Label>Remember me</Label>
                     </CheckboxField>
-                    <TextLink href="#" className="text-xs underline">
+                    <TextLink href="/forgot-password" className="text-xs underline">
                       Lost your password?
                     </TextLink>
                   </div>
                   <button
                     type="submit"
-                    className="mt-4 w-full bg-zinc-900 py-3 text-sm font-medium tracking-[0.2em] text-white uppercase hover:bg-zinc-800"
+                    className="mt-4 w-full rounded-full bg-zinc-900 py-3 text-sm font-medium tracking-[0.2em] text-white uppercase hover:bg-zinc-800"
                   >
                     Log in
                   </button>
@@ -125,7 +125,7 @@ export function AccountPageClient() {
                   </Text>
                   <button
                     type="submit"
-                    className="mt-4 w-full bg-zinc-900 py-3 text-sm font-medium tracking-[0.2em] text-white uppercase hover:bg-zinc-800"
+                    className="mt-4 w-full rounded-full bg-zinc-900 py-3 text-sm font-medium tracking-[0.2em] text-white uppercase hover:bg-zinc-800"
                   >
                     Register
                   </button>

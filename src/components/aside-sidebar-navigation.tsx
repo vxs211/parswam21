@@ -13,6 +13,15 @@ const shop_menu = [
   { name: 'Cotton Collection', href: '/collections/cargo-joggers' },
 ]
 
+const new_arrivals_menu = [
+  { name: 'Sale', href: '/sale' },
+  { name: 'New Arrivals', href: '/new-arrivals' },
+  { name: 'Featured Collection', href: '/featured-collection' },
+  { name: 'Premium Collection', href: '/premium-collection' },
+  { name: 'Online Exclusive', href: '/online-exclusive' },
+  { name: 'Best Sale', href: '/best-selling' },
+]
+
 interface Props {
   className?: string
 }
@@ -25,10 +34,7 @@ const AsideSidebarNavigation = ({ className }: Props) => {
         <div className="mt-6 flow-root">
           <div className="-my-6 divide-y divide-zinc-900/10">
             <div className="space-y-2 py-6">
-              <TextLink
-                href="/"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium hover:bg-zinc-50"
-              >
+              <TextLink href="/" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium hover:bg-zinc-50">
                 Home
               </TextLink>
 
@@ -55,12 +61,29 @@ const AsideSidebarNavigation = ({ className }: Props) => {
                   ))}
                 </DisclosurePanel>
               </Disclosure>
-              <TextLink
-                href="/collections/new-arrivals"
-                className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium hover:bg-zinc-50"
-              >
-                New Arrivals
-              </TextLink>
+              <Disclosure as="div" className="-mx-3">
+                <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 ps-3 pe-3.5 text-base/7 font-medium hover:bg-zinc-50">
+                  <Text>New Arrivals</Text>
+                  <HugeiconsIcon
+                    className="group-data-open:rotate-180"
+                    icon={ArrowDown01Icon}
+                    size={24}
+                    strokeWidth={1}
+                  />
+                </DisclosureButton>
+                <DisclosurePanel className="ps-6 pe-3 pb-2">
+                  {new_arrivals_menu.map((item) => (
+                    <DisclosureButton
+                      key={item.name}
+                      as={TextLink}
+                      href={item.href}
+                      className="block rounded-lg py-1 text-sm/7 font-medium hover:bg-zinc-50"
+                    >
+                      {item.name}
+                    </DisclosureButton>
+                  ))}
+                </DisclosurePanel>
+              </Disclosure>
               <TextLink
                 href="/fit-guide"
                 className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium hover:bg-zinc-50"

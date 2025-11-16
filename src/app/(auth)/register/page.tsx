@@ -3,7 +3,6 @@ import { Button } from '@/components/button'
 import { Checkbox, CheckboxField } from '@/components/checkbox'
 import { Field, Label } from '@/components/fieldset'
 import { Input } from '@/components/input'
-import { Select } from '@/components/select'
 import { Strong, Text, TextLink } from '@/components/text'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -38,14 +37,6 @@ export default function Login() {
       <Field>
         <Label>Password</Label>
         <Input type="password" name="password" autoComplete="new-password" />
-      </Field>
-      <Field>
-        <Label>Country</Label>
-        <Select name="country">
-          <option>Canada</option>
-          <option>Mexico</option>
-          <option>United States</option>
-        </Select>
       </Field>
       <CheckboxField>
         <Checkbox name="remember" />

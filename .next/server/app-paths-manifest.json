@@ -1,4 +1,7 @@
 {
+  "/(auth)/register/page": "app/(auth)/register/page.js",
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(auth)/forgot-password/page": "app/(auth)/forgot-password/page.js",
   "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js",
-  "/(shop)/(other-pages)/products/[handle]/page": "app/(shop)/(other-pages)/products/[handle]/page.js"
+  "/(shop)/(other-pages)/account/page": "app/(shop)/(other-pages)/account/page.js"
 }
