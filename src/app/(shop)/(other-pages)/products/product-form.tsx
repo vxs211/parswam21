@@ -53,7 +53,7 @@ export function ProductForm({ product }: { product: TProductItem }) {
           <div className="rounded-full bg-zinc-900 px-5 py-2">
             <Text className="text-xs text-white">{product.vendor}</Text>
           </div>
-          <Text className="text-xl">${price.toFixed(2)}</Text>
+          <Text className="text-xl">₹{price.toFixed(2)}</Text>
           <Text className="font-light text-zinc-400">/</Text>
 
           {/* Reviews */}

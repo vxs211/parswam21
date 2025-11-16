@@ -16,7 +16,7 @@ const userMenu = [
   { name: 'My account', href: '/account', icon: UserListIcon },
   { name: 'Account settings', href: '/settings', icon: Settings03Icon },
   { name: 'Orders', href: '/orders/4657', icon: ShoppingBasket01Icon },
-  { name: 'Wishlist', href: '/collections/all', icon: FavouriteIcon },
+  { name: 'Wishlist', href: '/wishlist', icon: FavouriteIcon },
   { name: 'Sign out', href: '#', icon: Logout01Icon },
 ]
 

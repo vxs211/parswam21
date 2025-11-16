@@ -1,7 +1,8 @@
 'use client'
 
 import { Dialog } from '@headlessui/react'
-import { ViewfinderCircleIcon } from '@heroicons/react/24/outline'
+import { HeartIcon as HeartIconOutline, ViewfinderCircleIcon } from '@heroicons/react/24/outline'
+import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid'
 import { Cancel01Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import clsx from 'clsx'
@@ -21,6 +22,7 @@ interface TImage {
 export function ProductGallery({ media, className }: { media: TImage[]; className?: string }) {
   const [isOpenModal, setOpenModal] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isWishlisted, setIsWishlisted] = useState(false)
 
   const closeModal = () => {
     setOpenModal(false)
@@ -59,12 +61,26 @@ export function ProductGallery({ media, className }: { media: TImage[]; classNam
                 priority
               />
 
+              {/* Quick view button */}
               <button
                 className="absolute top-3 left-3 flex h-8 w-8 items-center justify-center rounded-full bg-white opacity-0 transition-opacity group-hover:opacity-100 dark:text-neutral-100"
                 type="button"
               >
                 <span className="sr-only">View image</span>
                 <ViewfinderCircleIcon className="h-4 w-4" />
+              </button>
+
+              {/* Wishlist heart button */}
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  setIsWishlisted((prev) => !prev)
+                }}
+                className="absolute top-3 right-3 flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 bg-white/95 text-zinc-900 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <span className="sr-only">{isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}</span>
+                {isWishlisted ? <HeartIconSolid className="h-4 w-4" /> : <HeartIconOutline className="h-4 w-4" />}
               </button>
             </div>
           )

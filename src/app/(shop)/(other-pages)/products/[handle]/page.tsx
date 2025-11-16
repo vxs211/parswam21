@@ -58,6 +58,7 @@ export default async function Product({ params }: { params: Promise<{ handle: st
   const productReviews = await getProductReviews()
 
   const { images, description } = product
+  const mainImageSrc = images?.[0]?.src || '/images/fashion/Parshwam-1.webp'
 
   return (
     <div className={clsx('product-page relative space-y-12 sm:space-y-16')}>
@@ -116,23 +117,16 @@ export default async function Product({ params }: { params: Promise<{ handle: st
           </TabList>
           <TabPanels className="mt-10 lg:mt-16">
             <TabPanel>
-              <ProductDetailContent
-                content={description}
-                imageSrc={
-                  product?.collections[0].handle === 'skincare-essentials'
-                    ? '/images/skincare/feature-1.webp'
-                    : '/images/fashion/feature-1.png'
-                }
-              />
+              <ProductDetailContent content={description} imageSrc={mainImageSrc} />
             </TabPanel>
             <TabPanel>
               <ProductReviewSection reviews={productReviews} />
             </TabPanel>
             <TabPanel>
-              <ProductUsageSection imageSrc="/images/skincare/feature-3.png" />
+              <ProductUsageSection imageSrc={mainImageSrc} />
             </TabPanel>
             <TabPanel>
-              <ProductFaqsSection imageSrc="/images/skincare/hero.png" />
+              <ProductFaqsSection imageSrc={mainImageSrc} />
             </TabPanel>
           </TabPanels>
         </TabGroup>

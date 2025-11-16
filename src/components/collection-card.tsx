@@ -46,14 +46,14 @@ export default function CollectionCard({
         <span className="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover/collection:opacity-100"></span>
       </div>
 
-      <div className="absolute inset-x-4 bottom-4 flex items-center justify-center gap-0.5">
-        <div className="flex h-11 grow items-center justify-center rounded-full bg-white px-5 text-zinc-900">
+      <div className="absolute inset-x-4 bottom-4 flex translate-y-2 items-center justify-center gap-0.5 opacity-0 transition-all duration-300 group-hover/collection:translate-y-0 group-hover/collection:opacity-100">
+        <div className="flex h-11 grow items-center justify-center rounded-full bg-zinc-900/90 px-5 text-white shadow-md">
           <Text className="leading-none">{title}</Text>
         </div>
 
         {showArrow ? (
-          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-zinc-900">
-            <ArrowUpRightIcon className="h-4 w-4" />
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-zinc-900/90 text-white shadow-md">
+            <ArrowUpRightIcon className="h-4 w-4" aria-hidden="true" />
           </div>
         ) : null}
       </div>
