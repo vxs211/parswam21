@@ -2,6 +2,7 @@ import { Divider } from '@/components/divider'
 import LogoLoop from '@/components/logoloop'
 import FeatureSection2 from '@/components/sections/feature-section-2'
 import FeatureSection3 from '@/components/sections/feature-section-3'
+import FeatureSection4 from '@/components/sections/feature-section-4'
 import HeroSection3 from '@/components/sections/hero-section-3'
 import SectionCollectionCarousel from '@/components/sections/section-collection-carousel'
 import SectionProductCarousel from '@/components/sections/section-product-carousel'
@@ -136,6 +137,7 @@ export default async function Home() {
           ],
         }}
       />
+      <FeatureSection4 className="container mt-24 sm:mt-28 lg:mt-40" />
     </div>
   )
 }

@@ -1,1 +1,1 @@
-self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/vxs/parswam/parswam21/src/app/layout":["static/media/2709857960ef4384-s.p.woff2","static/media/13971731025ec697-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/vxs/parswam/parswam21/src/app/layout":["static/media/13971731025ec697-s.p.woff2","static/media/2709857960ef4384-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

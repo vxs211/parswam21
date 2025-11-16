@@ -12,8 +12,8 @@ const data = [
   },
   {
     id: 2,
-    title: 'WORLDWIDE SHIPPING',
-    description: 'Cheap, Fast Shipping Available to your Destination.',
+    title: 'PAN INDIA SHIPPING',
+    description: 'Cheap, Fast Shipping Available to your Doorstep.',
     icon: BoatIcon,
   },
   {
@@ -55,7 +55,7 @@ const FeatureSection4 = ({ className }: FeatureSection4Props) => {
           <Text className="mt-2 font-medium">{item.title}</Text>
           <HugeiconsIcon icon={item.icon} size={40} className="mt-10 text-zinc-700 sm:mt-14" strokeWidth={1} />
           <Text
-            className="mt-4 line-clamp-3 text-zinc-500"
+            className="mt-4 line-clamp-3 text-zinc-500 normal-case"
             dangerouslySetInnerHTML={{ __html: item.description }}
           ></Text>
         </div>

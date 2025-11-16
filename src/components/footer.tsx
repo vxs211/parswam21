@@ -24,9 +24,9 @@ const navigation = {
   help: [
     { name: 'Order Status & Tracking', href: '#' },
     { name: 'Contact Us', href: '/contact' },
-    { name: 'Return & Exchange Policy', href: '#' },
-    { name: 'Term & Condition', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
+    { name: 'Return & Exchange Policy', href: '/return-exchange-policy' },
+    { name: 'Term & Condition', href: '/terms-and-conditions' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
   ],
   social: [
     {
