@@ -1,9 +1,10 @@
 import { Divider } from '@/components/divider'
+import HeroAnimatedTitle from '@/components/hero-animated-title'
+import HeroPillToggle from '@/components/hero-pill-toggle'
 import LogoLoop from '@/components/logoloop'
 import FeatureSection2 from '@/components/sections/feature-section-2'
 import FeatureSection3 from '@/components/sections/feature-section-3'
 import FeatureSection4 from '@/components/sections/feature-section-4'
-import HeroSection3 from '@/components/sections/hero-section-3'
 import SectionCollectionCarousel from '@/components/sections/section-collection-carousel'
 import SectionProductCarousel from '@/components/sections/section-product-carousel'
 import { getCollections, getGroupCollections } from '@/data'
@@ -23,7 +24,15 @@ export default async function Home() {
 
   return (
     <div>
-      <HeroSection3 />
+      {/* <HeroSection3 /> */}
+      <section className="relative min-h-screen bg-black">
+        <div className="absolute top-1/2 left-1/2 container max-w-3xl -translate-x-1/2 -translate-y-1/2 px-4">
+          <div className="flex flex-col items-center gap-4 sm:gap-6">
+            <HeroAnimatedTitle />
+            <HeroPillToggle />
+          </div>
+        </div>
+      </section>
 
       <SectionCollectionCarousel className="container mt-20 sm:mt-28 lg:mt-28" groupCollections={groupCollections} />
       {collections
