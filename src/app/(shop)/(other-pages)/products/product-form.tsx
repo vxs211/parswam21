@@ -11,7 +11,7 @@ import { StarIcon } from '@heroicons/react/24/solid'
 import { ShoppingBag03Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import clsx from 'clsx'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export function ProductForm({ product }: { product: TProductItem }) {
   const { open: openAside } = useAside()
@@ -25,6 +25,20 @@ export function ProductForm({ product }: { product: TProductItem }) {
   // You need to recalculate according to your data structure and project
   const [quantity, setQuantity] = useState(1)
   const [stateSelectedOption, setStateSelectedOption] = useState<{ name: string; value: string }[]>(selected_options)
+
+  const FIXED_SIZES = ['28 INCH', '30 INCH', '32 INCH', '34 INCH', '36 INCH']
+
+  // Normalize initial size-like options to a consistent value
+  useEffect(() => {
+    setStateSelectedOption((prev) => {
+      const next = [...prev]
+      const hasSize = next.some((opt) => opt.name === 'Size' || opt.name === 'Pack Size')
+      if (hasSize) {
+        return next.map((opt) => (opt.name === 'Size' || opt.name === 'Pack Size' ? { ...opt, value: '32 INCH' } : opt))
+      }
+      return next
+    })
+  }, [])
 
   const breadcrumbs = [
     { id: 1, name: 'Home', href: '/' },
@@ -84,7 +98,10 @@ export function ProductForm({ product }: { product: TProductItem }) {
                     optionName === 'Color' ? 'flex items-center gap-x-3' : 'flex flex-wrap items-center gap-3'
                   )}
                 >
-                  {optionValues.map(({ name, swatch }, index) => {
+                  {(optionName === 'Size' || optionName === 'Pack Size'
+                    ? FIXED_SIZES.map((value) => ({ name: value, swatch: null }))
+                    : optionValues
+                  ).map(({ name, swatch }, index) => {
                     // NOTE: this for demo ...
                     // You need to recalculate according to your data structure and project
                     const selected = stateSelectedOption.some((opt) => opt.name === optionName && opt.value === name)

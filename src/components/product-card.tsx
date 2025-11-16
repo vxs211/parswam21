@@ -35,8 +35,9 @@ export default function ProductCard({
 
   // find the product color
   const color = selected_options.find((option) => option.name === 'Color')?.value
-  // // find the product size
-  const size = selected_options.find((option) => option.name === 'Size')?.value
+  // find the product size-like option and normalize display to a fixed waist size
+  const hasSizeOption = selected_options.some((option) => option.name === 'Size' || option.name === 'Pack Size')
+  const size = hasSizeOption ? '32 INCH' : undefined
 
   return (
     <div className={clsx('group/prd relative w-full', className)}>
