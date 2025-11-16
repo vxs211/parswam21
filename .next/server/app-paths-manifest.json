@@ -1,7 +1,7 @@
 {
-  "/(shop)/(other-pages)/kids-collection/page": "app/(shop)/(other-pages)/kids-collection/page.js",
-  "/(shop)/(other-pages)/wishlist/page": "app/(shop)/(other-pages)/wishlist/page.js",
-  "/(shop)/(other-pages)/collections/[handle]/page": "app/(shop)/(other-pages)/collections/[handle]/page.js",
   "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js",
-  "/(shop)/(other-pages)/products/[handle]/page": "app/(shop)/(other-pages)/products/[handle]/page.js"
+  "/(shop)/(other-pages)/best-selling/page": "app/(shop)/(other-pages)/best-selling/page.js",
+  "/(shop)/(other-pages)/sale/page": "app/(shop)/(other-pages)/sale/page.js",
+  "/(shop)/(other-pages)/order-tracking/page": "app/(shop)/(other-pages)/order-tracking/page.js",
+  "/(shop)/(other-pages)/featured-collection/page": "app/(shop)/(other-pages)/featured-collection/page.js"
 }

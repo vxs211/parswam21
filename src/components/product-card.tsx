@@ -1,5 +1,5 @@
 import { TProductItem } from '@/data'
-import { ShoppingBagIcon } from '@heroicons/react/24/outline'
+import { HeartIcon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { Text, TextLink } from './text'
@@ -10,9 +10,17 @@ interface ProductCardProps {
   imageRatio?: string
   showVendor?: boolean
   labelOverride?: string
+  wishlistTag?: boolean
 }
 
-export default function ProductCard({ product, className, imageRatio = 'aspect-3/4', showVendor = true, labelOverride }: ProductCardProps) {
+export default function ProductCard({
+  product,
+  className,
+  imageRatio = 'aspect-3/4',
+  showVendor = true,
+  labelOverride,
+  wishlistTag = false,
+}: ProductCardProps) {
   const { id, title, price, featured_image, handle, images = [], tags, vendor, selected_options } = product
 
   const primaryImage = images?.[0]
@@ -53,14 +61,23 @@ export default function ProductCard({ product, className, imageRatio = 'aspect-3
         ) : null}
       </div>
 
-      {/* Category Label */}
+      {/* Category / Wishlist Label (left) */}
       {showVendor ? (
         <div className="absolute top-3 left-3">
-          <div className="rounded-full bg-white px-3.5 py-1.5 text-xs leading-none text-zinc-900 uppercase">{labelOverride ?? vendor}</div>
+          {wishlistTag ? (
+            <div className="flex items-center gap-1 rounded-full bg-white px-3.5 py-1.5 text-[10px] font-semibold tracking-[0.08em] text-zinc-900 uppercase">
+              <HeartIcon className="h-3 w-3" />
+              <span>Wish Item</span>
+            </div>
+          ) : (
+            <div className="rounded-full bg-white px-3.5 py-1.5 text-xs leading-none text-zinc-900 uppercase">
+              {labelOverride ?? vendor}
+            </div>
+          )}
         </div>
       ) : null}
 
-      {/* Shopping Bag Icon */}
+      {/* Right-side Shopping Bag Icon */}
       <div className="absolute top-3 right-3">
         <div className="rounded-full bg-white p-1.5 text-zinc-500">
           <ShoppingBagIcon className="h-4 w-4" />

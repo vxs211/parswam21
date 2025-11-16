@@ -20,7 +20,8 @@ const shippingInfo = [
   {
     icon: Monitor,
     title: 'Shipment to P.O. boxes or APO/FPO addresses',
-    description: 'Parswam.com ships to addresses within the U.S., U.S. Territories, and APO/FPO/DPO addresses.',
+    description:
+      'Parswam.com currently ships to addresses across India, including all major cities and towns. Please ensure your full address and correct PIN code are provided for smooth delivery.',
   },
   {
     icon: ClipboardCheck,
