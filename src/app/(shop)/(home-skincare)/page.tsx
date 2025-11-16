@@ -73,10 +73,10 @@ export default async function Home() {
           {/* First line - left to right */}
           <LogoLoop
             logos={[
-              { src: '/clients/Untitled-design-21-4.png' },
-              { src: '/clients/Untitled-design-23-3.png' },
-              { src: '/clients/Untitled-design-24-4.png' },
-              { src: '/clients/Untitled-design-25.png' },
+              { src: '/client/logo 1(par).png' },
+              { src: '/client/logo 2(par).png' },
+              { src: '/client/logo 3(par).png' },
+              { src: '/client/logo 4(par).png' },
             ]}
             speed={40}
             direction="left"
@@ -92,11 +92,11 @@ export default async function Home() {
           {/* Second line - right to left */}
           <LogoLoop
             logos={[
-              { src: '/clients/Untitled-design-26.png' },
-              { src: '/clients/Untitled-design-27.png' },
-              { src: '/clients/Untitled-design-28.png' },
-              { src: '/clients/Untitled-design-29.png' },
-              { src: '/clients/Untitled-design-31.png' },
+              { src: '/client/logo 5(par).png' },
+              { src: '/client/logo 6(par).png' },
+              { src: '/client/logo 7(par).png' },
+              { src: '/client/logo 8(par).png' },
+              { src: '/client/logo 9(par).png' },
             ]}
             speed={40}
             direction="right"

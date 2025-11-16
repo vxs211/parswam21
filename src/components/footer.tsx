@@ -15,7 +15,7 @@ const navigation = {
     { name: 'Best Sale', href: '#' },
   ],
   corporate: [
-    { name: 'About Us', href: '#' },
+    { name: 'About Us', href: '/about-us' },
     { name: 'Career', href: '#' },
     { name: 'Become a Franchise', href: '#' },
     { name: 'B2B Inquiry', href: '#' },
