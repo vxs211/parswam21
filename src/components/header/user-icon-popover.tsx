@@ -13,7 +13,7 @@ import { HugeiconsIcon } from '@hugeicons/react'
 import { Text, TextLink } from '../text'
 
 const userMenu = [
-  { name: 'My account', href: '/orders', icon: UserListIcon },
+  { name: 'My account', href: '/account', icon: UserListIcon },
   { name: 'Account settings', href: '/settings', icon: Settings03Icon },
   { name: 'Orders', href: '/orders/4657', icon: ShoppingBasket01Icon },
   { name: 'Wishlist', href: '/collections/all', icon: FavouriteIcon },

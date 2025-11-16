@@ -106,11 +106,12 @@ const Page = () => {
               <div className="flex max-w-sm flex-col gap-7 self-end">
                 <div>
                   <Text className="text-zinc-500">email</Text>
-                  <Text className="mt-2">exBitPan.store@gmail.com</Text>
+                  <Text className="mt-2">info@parswam.com</Text>
                 </div>
                 <div>
-                  <Text className="text-zinc-500">Phone</Text>
-                  <Text className="mt-2">+1660-826-4000</Text>
+                  <Text className="text-zinc-500">Telephone</Text>
+                  <Text className="mt-2">+91 63511 37399</Text>
+                  <Text className="mt-1">+91 96014 29990</Text>
                 </div>
                 <div>
                   <Text className="text-zinc-500">Address</Text>
@@ -154,7 +155,7 @@ const ContactForm = () => {
       </Field>
       <Field>
         <Label>Email</Label>
-        <Input placeholder="mail@gmail.com" type="email" name="email" />
+        <Input placeholder="info@parswam.com" type="email" name="email" />
       </Field>
       <Field>
         <Label>Message</Label>

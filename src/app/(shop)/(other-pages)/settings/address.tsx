@@ -12,15 +12,15 @@ export function Address() {
   return (
     <div className="grid grid-cols-2 gap-6">
       <Input aria-label="Street Address" name="address" placeholder="Street Address" className="col-span-2" />
-      <Input aria-label="City" name="city" placeholder="City" defaultValue="Toronto" className="col-span-2" />
-      <Listbox aria-label="Region" name="region" placeholder="Region" defaultValue="Ontario">
+      <Input aria-label="City" name="city" placeholder="City" defaultValue="Mumbai" className="col-span-2" />
+      <Listbox aria-label="Region" name="region" placeholder="Region" defaultValue="Maharashtra">
         {country.regions.map((region) => (
           <ListboxOption key={region} value={region}>
             <ListboxLabel>{region}</ListboxLabel>
           </ListboxOption>
         ))}
       </Listbox>
-      <Input aria-label="Postal code" name="postal_code" placeholder="Postal Code" defaultValue="A1A 1A1" />
+      <Input aria-label="Postal code" name="postal_code" placeholder="PIN Code" defaultValue="400001" />
       <Listbox
         aria-label="Country"
         name="country"

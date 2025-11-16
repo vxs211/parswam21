@@ -19,7 +19,7 @@ const data = [
   {
     id: 3,
     title: '5 STAR CARE',
-    description: 'We\'re here for you anytime, <span class="underline">contact@bitpan.com',
+    description: "We're here for you anytime, info@parswam.com",
     icon: Mailbox01Icon,
   },
   {
@@ -30,8 +30,8 @@ const data = [
   },
   {
     id: 5,
-    title: 'Kind to planet',
-    description: "you're doing good for yourself, and the planet.",
+    title: 'KIND TO PLANET',
+    description: "You're doing good for yourself, and the planet.",
     icon: Plant03Icon,
   },
 ]
