@@ -3,11 +3,10 @@
 import { Input } from '@/components/input'
 import { Listbox, ListboxLabel, ListboxOption } from '@/components/listbox'
 import { getCountries } from '@/data'
-import { useState } from 'react'
 
 export function Address() {
   let countries = getCountries()
-  let [country, setCountry] = useState(countries[0])
+  let country = countries[0]
 
   return (
     <div className="grid grid-cols-2 gap-6">
@@ -21,22 +20,7 @@ export function Address() {
         ))}
       </Listbox>
       <Input aria-label="Postal code" name="postal_code" placeholder="PIN Code" defaultValue="400001" />
-      <Listbox
-        aria-label="Country"
-        name="country"
-        placeholder="Country"
-        by="code"
-        value={country}
-        onChange={(country) => setCountry(country)}
-        className="col-span-2"
-      >
-        {countries.map((country) => (
-          <ListboxOption key={country.code} value={country}>
-            <img className="w-5 sm:w-4" src={country.flagUrl} alt="" />
-            <ListboxLabel>{country.name}</ListboxLabel>
-          </ListboxOption>
-        ))}
-      </Listbox>
+      <Input aria-label="Country" name="country" defaultValue="India" readOnly className="col-span-2" />
     </div>
   )
 }

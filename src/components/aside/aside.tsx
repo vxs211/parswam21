@@ -5,7 +5,7 @@ import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/re
 import { Cancel01Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import clsx from 'clsx'
-import { createContext, type ReactNode, useContext, useState } from 'react'
+import { createContext, type ReactNode, useContext, useEffect, useState } from 'react'
 
 /**
  * Drawer component that opens on user click.
@@ -124,6 +124,22 @@ const AsideContext = createContext<AsideContextValue | null>(null)
 
 export function AsideProvider({ children }: { children: ReactNode }) {
   const [type, setType] = useState<AsideType>('closed')
+
+  useEffect(() => {
+    if (typeof document === 'undefined') return
+
+    const body = document.body
+
+    if (type !== 'closed') {
+      body.classList.add('overflow-hidden')
+    } else {
+      body.classList.remove('overflow-hidden')
+    }
+
+    return () => {
+      body.classList.remove('overflow-hidden')
+    }
+  }, [type])
 
   return (
     <AsideContext.Provider

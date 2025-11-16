@@ -20,7 +20,7 @@ const AsideSidebarCart = async ({ className = '' }: Props) => {
       <div className={clsx('flex h-full flex-col', className)}>
         {/* CONTENT */}
 
-        <div className="flex-1 overflow-x-hidden overflow-y-auto py-6 hidden-scrollbar">
+        <div className="flex-1 overflow-x-hidden overflow-y-auto py-6">
           <div className="flow-root">
             <ul role="list" className="-my-6 divide-y divide-zinc-900/10">
               {products.map((product) => (
