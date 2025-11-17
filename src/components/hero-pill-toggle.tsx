@@ -10,6 +10,8 @@ const HeroPillToggle = () => {
   const [active, setActive] = useState<(typeof labels)[number]>('MORELI')
   const activeIndex = labels.indexOf(active)
   const imageRef = useRef<HTMLDivElement>(null)
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([])
+  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 })
 
   useEffect(() => {
     if ((active === 'MORELI' || active === 'ANIMAN' || active === 'GERNIUI') && imageRef.current) {
@@ -38,6 +40,22 @@ const HeroPillToggle = () => {
     }
   }, [active])
 
+  useEffect(() => {
+    const updateIndicator = () => {
+      const activeButton = buttonRefs.current[activeIndex]
+      if (activeButton) {
+        setIndicatorStyle({
+          left: activeButton.offsetLeft,
+          width: activeButton.offsetWidth,
+        })
+      }
+    }
+
+    updateIndicator()
+    window.addEventListener('resize', updateIndicator)
+    return () => window.removeEventListener('resize', updateIndicator)
+  }, [activeIndex])
+
   return (
     <>
       <div
@@ -55,11 +73,14 @@ const HeroPillToggle = () => {
         )}
       </div>
 
-      <div className="fixed bottom-[-144px] left-1/2 z-10 mx-auto flex w-full max-w-xl -translate-x-1/2 items-center justify-center text-xs font-semibold tracking-[0.18em] text-zinc-900 sm:static sm:bottom-auto sm:left-auto sm:mt-20 sm:translate-x-0">
-        <div className="relative mx-auto flex w-full max-w-xs items-center gap-3 rounded-full bg-white/90 px-2 py-1.5 sm:max-w-sm md:max-w-md md:translate-y-[150px] lg:max-w-xl lg:translate-y-[-30px]">
+      <div className="fixed bottom-[-150px] left-1/2 z-10 mx-auto flex w-full max-w-xl -translate-x-1/2 items-center justify-center px-4 text-xs font-semibold tracking-[0.18em] text-zinc-900 sm:static sm:bottom-auto sm:left-auto sm:mt-20 sm:translate-x-0 sm:px-0">
+        <div className="relative mx-auto flex w-full max-w-xs items-center rounded-full bg-white/90 p-1.5 sm:max-w-sm md:max-w-md md:translate-y-[150px] lg:max-w-xl lg:translate-y-[-30px]">
           <div
-            className="pointer-events-none absolute inset-y-1 left-2 w-1/3 rounded-full bg-zinc-900 transition-transform duration-500 ease-out"
-            style={{ transform: `translateX(${activeIndex * 100}%)` }}
+            className="pointer-events-none absolute inset-y-1.5 rounded-full bg-zinc-900 transition-all duration-500 ease-out"
+            style={{
+              left: `${indicatorStyle.left}px`,
+              width: `${indicatorStyle.width}px`,
+            }}
           />
 
           {labels.map((label, index) => {
@@ -70,8 +91,11 @@ const HeroPillToggle = () => {
               <button
                 key={label}
                 type="button"
+                ref={(el) => {
+                  buttonRefs.current[index] = el
+                }}
                 onClick={() => setActive(label)}
-                className="relative z-10 flex-1 rounded-full px-6 py-3 text-center transition-colors duration-200"
+                className="relative z-10 flex-1 rounded-full px-3 py-2.5 text-center transition-colors duration-200 sm:px-4 sm:py-3 md:px-6"
               >
                 <Tag className={isActive ? 'text-white' : 'text-zinc-900'}>{label}</Tag>
               </button>

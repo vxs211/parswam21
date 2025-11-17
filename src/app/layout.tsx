@@ -53,7 +53,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         playfair_display.variable
       )}
     >
-      <body>
+      <body className="overflow-x-hidden">
         <LenisSmoothScroll>
           <Aside.Provider>{children}</Aside.Provider>
         </LenisSmoothScroll>
