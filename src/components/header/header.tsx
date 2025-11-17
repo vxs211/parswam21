@@ -6,9 +6,9 @@ import Link from 'next/link'
 import { TextLink } from '../text'
 import CartIconBtn from './cart-icon-btn'
 import HamburgerIconMenu from './hamburger-icon-menu'
+import NewArrivalsDropdown from './new-arrivals-dropdown'
 import SearchIconPopover from './search-icon-popover'
 import ShopDropdown from './shop-dropdown'
-import NewArrivalsDropdown from './new-arrivals-dropdown'
 import UserIconPopover from './user-icon-popover'
 
 interface HeaderProps {

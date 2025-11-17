@@ -47,14 +47,14 @@ const HeroAnimatedTitle = () => {
   return (
     <h2
       ref={titleRef}
-      className="text-center leading-[0.8] font-extrabold tracking-[-0.5em] text-white sm:tracking-[-0.8em] md:tracking-[-1em]"
+      className="text-center leading-[0.8] font-extrabold tracking-[-0.5em] text-black sm:tracking-[-0.8em] md:tracking-[-1em]"
     >
       <span ref={parsRef} className="block text-[22vw] sm:text-[18vw] md:text-[16vw] lg:text-[20vw]">
         PARSWAM
       </span>
       <span
         ref={storeRef}
-        className="block bg-gradient-to-r from-white via-zinc-500 to-black bg-clip-text text-[20vw] text-transparent italic sm:text-[12vw] md:text-[10vw] lg:text-[20vw]"
+        className="block bg-gradient-to-r from-black via-zinc-500 to-white bg-clip-text text-[20vw] text-transparent italic sm:text-[12vw] md:text-[10vw] lg:text-[20vw]"
         data-slot="italic"
       >
         STORE

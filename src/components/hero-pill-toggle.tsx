@@ -52,10 +52,10 @@ const HeroPillToggle = () => {
         )}
       </div>
 
-      <div className="fixed bottom-[-144px] left-1/2 z-10 mx-auto flex w-full max-w-xl -translate-x-1/2 items-center justify-center text-xs font-semibold tracking-[0.18em] text-zinc-400 sm:static sm:bottom-auto sm:left-auto sm:mt-20 sm:translate-x-0">
-        <div className="relative flex w-full items-center gap-3 rounded-full bg-zinc-900/90 px-2 py-1.5">
+      <div className="fixed bottom-[-144px] left-1/2 z-10 mx-auto flex w-full max-w-xl -translate-x-1/2 items-center justify-center text-xs font-semibold tracking-[0.18em] text-zinc-900 sm:static sm:bottom-auto sm:left-auto sm:mt-20 sm:translate-x-0">
+        <div className="relative flex w-full items-center gap-3 rounded-full bg-white/90 px-2 py-1.5">
           <div
-            className="pointer-events-none absolute inset-y-1 left-2 w-1/3 rounded-full bg-white transition-transform duration-500 ease-out"
+            className="pointer-events-none absolute inset-y-1 left-2 w-1/3 rounded-full bg-zinc-900 transition-transform duration-500 ease-out"
             style={{ transform: `translateX(${activeIndex * 100}%)` }}
           />
 
@@ -70,7 +70,7 @@ const HeroPillToggle = () => {
                 onClick={() => setActive(label)}
                 className="relative z-10 flex-1 rounded-full px-6 py-3 text-center transition-colors duration-200"
               >
-                <Tag className={isActive ? 'text-zinc-900' : 'text-zinc-400'}>{label}</Tag>
+                <Tag className={isActive ? 'text-white' : 'text-zinc-900'}>{label}</Tag>
               </button>
             )
           })}
