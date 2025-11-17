@@ -13,6 +13,9 @@ const HeroPillToggle = () => {
 
   useEffect(() => {
     if ((active === 'MORELI' || active === 'ANIMAN' || active === 'GERNIUI') && imageRef.current) {
+      if (typeof window !== 'undefined') {
+        window.dispatchEvent(new CustomEvent('hero-label-change', { detail: active }))
+      }
       gsap.fromTo(
         imageRef.current,
         {
@@ -47,13 +50,13 @@ const HeroPillToggle = () => {
             alt="Hero"
             width={800}
             height={800}
-            className="h-auto max-h-[100vh] w-full max-w-[100vw] translate-y-60 object-contain md:max-h-[95vh] md:w-auto md:translate-y-69 lg:w-full lg:max-w-[100vw] lg:translate-y-20"
+            className="h-auto max-h-[100vh] w-full max-w-[100vw] translate-y-60 object-contain md:max-h-[95vh] md:w-auto md:translate-y-69 lg:w-full lg:max-w-[100vw] lg:translate-y-8"
           />
         )}
       </div>
 
       <div className="fixed bottom-[-144px] left-1/2 z-10 mx-auto flex w-full max-w-xl -translate-x-1/2 items-center justify-center text-xs font-semibold tracking-[0.18em] text-zinc-900 sm:static sm:bottom-auto sm:left-auto sm:mt-20 sm:translate-x-0">
-        <div className="relative mx-auto flex w-full max-w-xs items-center gap-3 rounded-full bg-white/90 px-2 py-1.5 sm:max-w-sm md:max-w-md md:translate-y-[150px] lg:max-w-xl">
+        <div className="relative mx-auto flex w-full max-w-xs items-center gap-3 rounded-full bg-white/90 px-2 py-1.5 sm:max-w-sm md:max-w-md md:translate-y-[150px] lg:max-w-xl lg:translate-y-[-30px]">
           <div
             className="pointer-events-none absolute inset-y-1 left-2 w-1/3 rounded-full bg-zinc-900 transition-transform duration-500 ease-out"
             style={{ transform: `translateX(${activeIndex * 100}%)` }}
