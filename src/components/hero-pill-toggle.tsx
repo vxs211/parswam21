@@ -64,6 +64,7 @@ const HeroPillToggle = () => {
       >
         {(active === 'MORELI' || active === 'ANIMAN' || active === 'GERNIUI') && (
           <Image
+            key={active}
             src={active === 'MORELI' ? '/hero/h1.svg' : active === 'ANIMAN' ? '/hero/h2.svg' : '/hero/h3.svg'}
             alt="Hero"
             width={800}
@@ -71,6 +72,12 @@ const HeroPillToggle = () => {
             className="h-auto max-h-[100vh] w-full max-w-[100vw] translate-y-60 object-contain md:max-h-[95vh] md:w-auto md:translate-y-69 lg:w-full lg:max-w-[100vw] lg:translate-y-8"
           />
         )}
+      </div>
+
+      <div className="hidden">
+        <Image src="/hero/h1.svg" alt="Hero MORELI" width={800} height={800} priority />
+        <Image src="/hero/h2.svg" alt="Hero ANIMAN" width={800} height={800} priority />
+        <Image src="/hero/h3.svg" alt="Hero GERNIUI" width={800} height={800} priority />
       </div>
 
       <div className="fixed bottom-[-150px] left-1/2 z-10 mx-auto flex w-full max-w-xl -translate-x-1/2 items-center justify-center px-4 text-xs font-semibold tracking-[0.18em] text-zinc-900 sm:static sm:bottom-auto sm:left-auto sm:mt-20 sm:translate-x-0 sm:px-0">
