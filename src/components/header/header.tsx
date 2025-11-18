@@ -25,7 +25,7 @@ const Header = ({ className, hasBottomBorder = true, variant = 'default' }: Head
         'group z-10 w-full',
         variant === 'default' && 'relative bg-white',
         variant === 'bg-transparent-text-white' &&
-          'absolute inset-x-0 top-0 bg-transparent text-white transition-colors duration-300 has-[.bitpan-popover-full-panel]:text-zinc-950'
+          'absolute inset-x-0 top-0 bg-transparent text-white transition-colors duration-300 has-[.parswam-popover-full-panel]:text-zinc-950'
       )}
     >
       <nav aria-label="Global" className="container">
@@ -33,7 +33,7 @@ const Header = ({ className, hasBottomBorder = true, variant = 'default' }: Head
           className={clsx(
             'flex items-center justify-between border-zinc-950/10 py-6 dark:border-white/10',
             hasBottomBorder && 'border-b',
-            !hasBottomBorder && 'has-[.bitpan-popover-full-panel]:border-b'
+            !hasBottomBorder && 'has-[.parswam-popover-full-panel]:border-b'
           )}
         >
           {/* LEFT LOGO */}

@@ -22,11 +22,11 @@ const playfair_display = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Bitpan',
-    default: 'Bitpan',
+    template: '%s - Parswam',
+    default: 'Parswam',
   },
   description:
-    'Bitpan is a modern and elegant template for Next.js, Tailwind CSS, and TypeScript. It is designed to be simple and easy to use, with a focus on performance and accessibility.',
+    'Parswam is a modern and elegant jeans store built with Next.js, Tailwind CSS, and TypeScript. It is designed to be simple and easy to use, with a focus on performance and accessibility.',
   keywords: [
     'Next.js',
     'Tailwind CSS',

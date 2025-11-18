@@ -1,6 +1,6 @@
 # Bitpan Demo
 
-To run the Bitpan demo, first install the npm dependencies:
+To run the Parswam demo, first install the npm dependencies:
 
 ```bash
 npm install
@@ -12,4 +12,4 @@ Next, run the development server:
 npm run dev
 ```
 
-Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the Parswam website.
