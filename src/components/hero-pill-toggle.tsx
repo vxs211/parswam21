@@ -69,7 +69,7 @@ const HeroPillToggle = () => {
             alt="Hero"
             width={800}
             height={800}
-            className="h-auto max-h-[100vh] w-full max-w-[100vw] translate-y-60 object-contain md:max-h-[95vh] md:w-auto md:translate-y-69 lg:w-full lg:max-w-[100vw] lg:translate-y-8"
+            className="h-auto max-h-[100vh] w-full max-w-[100vw] translate-y-60 object-contain md:max-h-[95vh] md:w-auto md:translate-y-69 lg:w-full lg:max-w-[100vw] lg:translate-y-16"
           />
         )}
       </div>
