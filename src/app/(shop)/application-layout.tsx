@@ -1,4 +1,4 @@
-import AsideSidebarCart from '@/components/aside-sidebar-cart'
+// import AsideSidebarCart from '@/components/aside-sidebar-cart'
 import AsideSidebarNavigation from '@/components/aside-sidebar-navigation'
 import Footer from '@/components/footer'
 import Header from '@/components/header/header'
@@ -25,7 +25,7 @@ const ApplicationLayout: React.FC<ComponentProps> = ({ children, header, footer 
 
       {/* ASIDES */}
       <AsideSidebarNavigation />
-      <AsideSidebarCart />
+      {/* <AsideSidebarCart /> */}
     </div>
   )
 }

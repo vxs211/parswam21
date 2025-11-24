@@ -71,22 +71,22 @@ export default async function Page() {
             <dl className="space-y-6 border-t border-zinc-200 pt-6 text-sm font-medium text-zinc-500">
               <div className="flex justify-between">
                 <dt className="uppercase">Subtotal</dt>
-                <dd className="text-zinc-900">$72.00</dd>
+                <dd className="text-zinc-900">₹72.00</dd>
               </div>
 
               <div className="flex justify-between">
                 <dt className="uppercase">Shipping</dt>
-                <dd className="text-zinc-900">$8.00</dd>
+                <dd className="text-zinc-900">₹8.00</dd>
               </div>
 
               <div className="flex justify-between">
                 <dt className="uppercase">Taxes</dt>
-                <dd className="text-zinc-900">$6.40</dd>
+                <dd className="text-zinc-900">₹6.40</dd>
               </div>
 
               <div className="flex items-center justify-between border-t border-zinc-200 pt-6 text-zinc-900">
                 <dt className="text-base uppercase">Total</dt>
-                <dd className="text-base">$86.40</dd>
+                <dd className="text-base">₹86.40</dd>
               </div>
             </dl>
 

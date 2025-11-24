@@ -108,7 +108,7 @@ export default async function Page() {
             <dl className="mt-8 space-y-5">
               <div className="flex items-center justify-between">
                 <dt className="text-sm text-zinc-600 uppercase">Subtotal</dt>
-                <dd className="text-sm font-medium text-zinc-900">$99.00</dd>
+                <dd className="text-sm font-medium text-zinc-900">₹99.00</dd>
               </div>
               <div className="flex items-center justify-between">
                 <dt className="flex items-center text-sm text-zinc-600">
@@ -118,7 +118,7 @@ export default async function Page() {
                     <HugeiconsIcon icon={HelpCircleIcon} size={16} color="currentColor" strokeWidth={1.5} />
                   </a>
                 </dt>
-                <dd className="text-sm font-medium text-zinc-900">$5.00</dd>
+                <dd className="text-sm font-medium text-zinc-900">₹5.00</dd>
               </div>
               <div className="flex items-center justify-between">
                 <dt className="flex items-center text-sm text-zinc-600">
@@ -128,12 +128,12 @@ export default async function Page() {
                     <HugeiconsIcon icon={HelpCircleIcon} size={16} color="currentColor" strokeWidth={1.5} />
                   </a>
                 </dt>
-                <dd className="text-sm font-medium text-zinc-900 uppercase">$8.32</dd>
+                <dd className="text-sm font-medium text-zinc-900 uppercase">₹8.32</dd>
               </div>
               <Divider />
               <div className="flex items-center justify-between">
                 <dt className="text-base font-medium text-zinc-900 uppercase">Order total</dt>
-                <dd className="text-base font-medium text-zinc-900 uppercase">$112.32</dd>
+                <dd className="text-base font-medium text-zinc-900 uppercase">₹112.32</dd>
               </div>
             </dl>
 

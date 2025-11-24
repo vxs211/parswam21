@@ -56,7 +56,7 @@ export function Aside({
                 openFrom === 'right' && 'data-enter:duration-100 data-enter:data-closed:translate-x-full'
               )}
             >
-              <div className="flex h-full flex-col px-4 md:px-8">
+              <div className="flex h-full min-h-0 flex-col px-4 md:px-8">
                 <header
                   className={`flex h-16 flex-shrink-0 items-center border-b border-zinc-900/10 md:h-20 ${
                     hasHeading ? 'justify-between' : 'justify-end'
@@ -82,7 +82,7 @@ export function Aside({
                     />
                   </button>
                 </header>
-                <div className="flex-1 overflow-hidden">{children}</div>
+                <div className="min-h-0 flex-1 overflow-hidden">{children}</div>
               </div>
             </DialogPanel>
           </div>
