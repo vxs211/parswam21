@@ -2,11 +2,11 @@
 
 import { ArrowUpRightIcon } from '@heroicons/react/24/solid'
 import Image from 'next/image'
+import { ReactNode, useEffect, useState } from 'react'
 import { Button } from '../button'
 import { Heading } from '../heading'
 import StarSvg from '../star-svg'
 import { Text } from '../text'
-import { ReactNode, useEffect, useState } from 'react'
 
 type Slide = {
   src: string
@@ -73,12 +73,11 @@ const HeroSection3 = ({ className }: HeroSection3Props) => {
   }, [])
 
   const currentSlide = slides[currentImageIndex] ?? slides[0]
-  const headingContent =
-    currentSlide.heading || (
-      <>
-        <span data-slot="italic">Where</span> Luxury <br /> finds its <span data-slot="italic">Meaning.</span>
-      </>
-    )
+  const headingContent = currentSlide.heading || (
+    <>
+      <span data-slot="italic">Where</span> Luxury <br /> finds its <span data-slot="italic">Meaning.</span>
+    </>
+  )
   const description =
     currentSlide.description ||
     'Unreservedly honest products that truly work, and be kind to skin and the planet – no exceptions!'
@@ -86,13 +85,13 @@ const HeroSection3 = ({ className }: HeroSection3Props) => {
   const ctaHref = currentSlide.ctaHref || '/collections/all'
 
   return (
-    <div className="relative flex min-h-dvh w-full">
+    <div className="relative flex min-h-dvh w-full select-none">
       {slides.map((slide, index) => (
         <Image
           key={slide.src}
           src={slide.src}
           alt="hero"
-          className={`object-cover object-center transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0 absolute'}`}
+          className={`object-cover object-center transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'absolute opacity-0'}`}
           fill
           priority
         />

@@ -25,7 +25,7 @@ export default async function Home() {
   return (
     <div>
       {/* <HeroSection3 /> */}
-      <section className="relative h-[90vh] bg-white md:min-h-screen">
+      <section className="relative h-[90vh] bg-white select-none md:min-h-screen">
         <div className="absolute top-1/2 left-1/2 container max-w-3xl -translate-x-1/2 -translate-y-1/2 px-4 lg:max-w-7xl">
           <div className="flex flex-col items-center gap-4 sm:gap-6">
             <HeroAnimatedTitle />

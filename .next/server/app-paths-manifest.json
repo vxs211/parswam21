@@ -1,3 +1,4 @@
 {
-  "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js"
+  "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js",
+  "/(shop)/(other-pages)/products/[handle]/page": "app/(shop)/(other-pages)/products/[handle]/page.js"
 }

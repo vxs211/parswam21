@@ -121,35 +121,120 @@ export function ProductGallery({ media, className }: { media: TImage[]; classNam
 }
 
 function ModalImageGallery({ media, indexActive }: { media: TImage[]; indexActive: number }) {
+  const [currentIndex, setCurrentIndex] = useState(indexActive ?? 0)
+  const [isHovering, setIsHovering] = useState(false)
+  const [position, setPosition] = useState({ x: 0.5, y: 0.5 })
+
   useEffect(() => {
-    if (!indexActive) return
-    const image = document.getElementById('image' + indexActive)
-    if (image) {
-      image.scrollIntoView({
-        behavior: 'instant',
-        block: 'start',
-        inline: 'nearest',
-      })
+    if (typeof indexActive === 'number') {
+      setCurrentIndex(indexActive)
     }
   }, [indexActive])
 
+  if (!media.length) return null
+
+  const currentImage = media[currentIndex] ?? media[0]
+
+  const handleMouseMove: React.MouseEventHandler<HTMLDivElement> = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect()
+    const x = (event.clientX - rect.left) / rect.width
+    const y = (event.clientY - rect.top) / rect.height
+
+    setPosition({
+      x: Math.min(1, Math.max(0, x)),
+      y: Math.min(1, Math.max(0, y)),
+    })
+  }
+
+  const showPrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + media.length) % media.length)
+  }
+
+  const showNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % media.length)
+  }
+
   return (
-    <div className="grid gap-5">
-      {media.map((image, i) => {
-        if (!image) return null
-        return (
-          <div key={'image' + i} id={'image' + i}>
-            <Image
-              src={image.src}
-              alt={image.alt || 'Product image'}
-              sizes="(min-width: 48em) 60vw, 90vw"
-              className="mx-auto"
-              width={image.width}
-              height={image.height}
+    <div className="flex flex-col gap-6 md:flex-row md:items-stretch">
+      {/* Main image with hover lens */}
+      <div className="relative flex-1 rounded-2xl border border-zinc-200 bg-zinc-50">
+        <div
+          className="relative aspect-[3/4] w-full cursor-zoom-in overflow-hidden"
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          onMouseMove={handleMouseMove}
+        >
+          <Image
+            src={currentImage.src}
+            alt={currentImage.alt || 'Product image'}
+            fill
+            sizes="(min-width: 1024px) 32vw, 90vw"
+            className="object-contain"
+          />
+
+          {isHovering && (
+            <div
+              className="pointer-events-none absolute h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/70 bg-white/10 shadow-[0_0_0_1px_rgba(0,0,0,0.15)]"
+              style={{
+                left: `${position.x * 100}%`,
+                top: `${position.y * 100}%`,
+              }}
             />
+          )}
+
+          {media.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={showPrev}
+                className="absolute top-1/2 left-6 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-zinc-900 shadow-lg transition hover:bg-white/90"
+              >
+                <span className="sr-only">Previous image</span>
+                &#8592;
+              </button>
+              <button
+                type="button"
+                onClick={showNext}
+                className="absolute top-1/2 right-6 flex h-16 w-16 -translate-y-1/2 items-center justify-center rounded-full bg-white text-2xl text-zinc-900 shadow-lg transition hover:bg-white/90"
+              >
+                <span className="sr-only">Next image</span>
+                &#8594;
+              </button>
+            </>
+          )}
+        </div>
+
+        {media.length > 1 && (
+          <div className="mt-4 flex gap-4 overflow-x-auto pb-1">
+            {media.map((image, index) => (
+              <button
+                key={image.src + index}
+                type="button"
+                onClick={() => setCurrentIndex(index)}
+                className={clsx(
+                  'relative h-20 w-16 shrink-0 overflow-hidden rounded-lg border',
+                  index === currentIndex ? 'border-zinc-900' : 'border-zinc-200'
+                )}
+              >
+                <Image src={image.src} alt={image.alt || 'Thumbnail'} fill sizes="96px" className="object-cover" />
+              </button>
+            ))}
           </div>
-        )
-      })}
+        )}
+      </div>
+
+      {/* Zoomed panel (desktop only) */}
+      <div className="relative hidden flex-1 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 md:block">
+        <div
+          className="h-full w-full"
+          style={{
+            backgroundImage: `url(${currentImage.src})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '200%',
+            backgroundPosition: `${position.x * 100}% ${position.y * 100}%`,
+          }}
+        />
+      </div>
     </div>
   )
 }
