@@ -1,7 +1,4 @@
 {
-  "/(shop)/(other-pages)/become-a-franchise/page": "app/(shop)/(other-pages)/become-a-franchise/page.js",
-  "/(shop)/(other-pages)/our-story/page": "app/(shop)/(other-pages)/our-story/page.js",
-  "/(shop)/(other-pages)/career/page": "app/(shop)/(other-pages)/career/page.js",
-  "/(shop)/(other-pages)/men-collection/page": "app/(shop)/(other-pages)/men-collection/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js"
 }

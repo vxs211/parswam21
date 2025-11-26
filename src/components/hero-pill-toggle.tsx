@@ -41,6 +41,25 @@ const HeroPillToggle = () => {
   }, [active])
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    const handler = (event: Event) => {
+      if (!(event instanceof CustomEvent)) return
+      const value = event.detail as (typeof labels)[number]
+
+      if (labels.includes(value)) {
+        setActive(value)
+      }
+    }
+
+    window.addEventListener('hero-force-label', handler as EventListener)
+
+    return () => {
+      window.removeEventListener('hero-force-label', handler as EventListener)
+    }
+  }, [])
+
+  useEffect(() => {
     const updateIndicator = () => {
       const activeButton = buttonRefs.current[activeIndex]
       if (activeButton) {
