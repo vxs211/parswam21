@@ -4,6 +4,8 @@ import { Text } from '@/components/text'
 import { VectorArrowDown2 } from '@/components/vector-arrow-down'
 import { Metadata } from 'next'
 import Image from 'next/image'
+import { Fragment } from 'react'
+import AnimatedArrow from './animated-arrow'
 
 export const metadata: Metadata = {
   title: 'Our Story',
@@ -121,30 +123,33 @@ const Page = () => {
         {/* Process Steps */}
         <div className="space-y-16 md:space-y-24 lg:space-y-32">
           {processSteps.map((step, index) => (
-            <div
-              key={index}
-              className={`flex flex-col gap-8 ${
-                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              } md:items-center md:gap-12 lg:gap-16`}
-            >
-              <div className="flex-1">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-                  <Image
-                    src={step.image}
-                    alt={step.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
+            <Fragment key={step.title}>
+              <div
+                className={`flex flex-col gap-8 ${
+                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                } md:items-center md:gap-12 lg:gap-16`}
+              >
+                <div className="flex-1">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+                    <Image
+                      src={step.image}
+                      alt={step.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                </div>
+                <div className="flex-1 space-y-4">
+                  <Heading level={3} fontSize="text-3xl lg:text-4xl font-medium">
+                    {step.title}
+                  </Heading>
+                  <Text className="leading-relaxed text-zinc-600">{step.description}</Text>
                 </div>
               </div>
-              <div className="flex-1 space-y-4">
-                <Heading level={3} fontSize="text-3xl lg:text-4xl font-medium">
-                  {step.title}
-                </Heading>
-                <Text className="leading-relaxed text-zinc-600">{step.description}</Text>
-              </div>
-            </div>
+
+              {index < processSteps.length - 1 ? <AnimatedArrow reverse={index % 2 !== 0} /> : null}
+            </Fragment>
           ))}
         </div>
 

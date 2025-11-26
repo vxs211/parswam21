@@ -21,35 +21,40 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(shop)/(other-pages)/layout.js"
     ],
-    "/(shop)/(other-pages)/products/layout": [
+    "/(shop)/(other-pages)/b2b-inquiry/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/products/layout.js"
-    ],
-    "/(shop)/(other-pages)/products/[handle]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/products/[handle]/page.js"
-    ],
-    "/(shop)/(other-pages)/denim-collection/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/denim-collection/page.js"
+      "static/chunks/app/(shop)/(other-pages)/b2b-inquiry/page.js"
     ],
     "/(shop)/(other-pages)/cart/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(shop)/(other-pages)/cart/page.js"
     ],
-    "/(shop)/(other-pages)/orders/[number]/page": [
+    "/(shop)/(other-pages)/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(shop)/(other-pages)/orders/[number]/page.js"
+      "static/chunks/app/(shop)/(other-pages)/contact/page.js"
     ],
-    "/_not-found/page": [
+    "/(shop)/(other-pages)/our-story/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/(shop)/(other-pages)/our-story/page.js"
+    ],
+    "/(shop)/(other-pages)/become-a-franchise/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(shop)/(other-pages)/become-a-franchise/page.js"
+    ],
+    "/(shop)/(other-pages)/career/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(shop)/(other-pages)/career/page.js"
+    ],
+    "/(shop)/(other-pages)/men-collection/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(shop)/(other-pages)/men-collection/page.js"
     ]
   }
 }

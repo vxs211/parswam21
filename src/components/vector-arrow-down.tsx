@@ -14,7 +14,7 @@ export const VectorArrowDown2 = ({ ...props }: VectorArrowDownProps) => {
   return (
     <svg width="268" height="176" viewBox="0 0 268 176" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <path
-        d="M0.0780465 8.82203C263.757 -43.3056 263.574 174.898 263.574 174.898M263.574 174.898L259.5 171.5M263.574 174.898L267 171"
+        d="M0.0780465 16C180 -10 263.574 145 263.574 174.898M263.574 174.898L259.5 171.5M263.574 174.898L267 171"
         stroke="currentColor"
       />
     </svg>

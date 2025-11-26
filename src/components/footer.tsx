@@ -5,20 +5,20 @@ import { Text } from './text'
 
 const navigation = {
   quickLinks: [
-    { name: 'Mens Jeans', href: '#' },
-    { name: 'Kids Jeans', href: '#' },
-    { name: 'Cargo & Joggers', href: '#' },
-    { name: 'New Arrivals', href: '#' },
-    { name: 'Featured Collection', href: '#' },
-    { name: 'Premium Collection', href: '#' },
-    { name: 'Online Exclusive', href: '#' },
-    { name: 'Best Sale', href: '#' },
+    { name: 'Mens Jeans', href: '/men-collection' },
+    { name: 'Kids Jeans', href: '/kids-collection' },
+    { name: 'Cargo & Joggers', href: '/men-collection' },
+    { name: 'New Arrivals', href: '/new-arrivals' },
+    { name: 'Featured Collection', href: '/featured-collection' },
+    { name: 'Premium Collection', href: '/premium-collection' },
+    { name: 'Online Exclusive', href: '/online-exclusive' },
+    { name: 'Best Sale', href: '/best-selling' },
   ],
   corporate: [
     { name: 'About Us', href: '/about-us' },
-    { name: 'Career', href: '#' },
-    { name: 'Become a Franchise', href: '#' },
-    { name: 'B2B Inquiry', href: '#' },
+    { name: 'Career', href: '/career' },
+    { name: 'Become a Franchise', href: '/become-a-franchise' },
+    { name: 'B2B Inquiry', href: '/b2b-inquiry' },
     { name: 'Our Story', href: '/our-story' },
   ],
   help: [
