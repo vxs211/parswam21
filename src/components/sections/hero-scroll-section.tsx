@@ -19,11 +19,16 @@ const HeroScrollSection = () => {
 
     const labels: HeroLabel[] = ['MORELI', 'ANIMAN', 'GERNIUI']
 
+    // Get navbar height to offset the pin start
+    const navbar = document.querySelector('header')
+    const navbarHeight = navbar?.offsetHeight || 0
+
     const trigger = ScrollTrigger.create({
       trigger: sectionRef.current,
-      start: 'top top',
+      start: () => `top ${navbarHeight}px`,
       end: () => '+=' + window.innerHeight * 3,
       pin: true,
+      pinSpacing: true,
       scrub: 0.6,
       snap: {
         snapTo: [0, 0.5, 1],

@@ -1135,9 +1135,36 @@ export async function getProducts() {
         {
           name: 'Color',
           optionValues: [
-            { name: 'Black', swatch: { color: '#000000', image: null } },
-            { name: 'Brown', swatch: { color: '#8B4513', image: null } },
-            { name: 'Tan', swatch: { color: '#D2B48C', image: null } },
+            {
+              name: 'Denim Grain',
+              swatch: {
+                color: '#000000',
+                image: {
+                  src: 'https://www.transparenttextures.com/patterns/black-paper.png',
+                  alt: 'Black textured fabric',
+                },
+              },
+            },
+            {
+              name: 'Rich Twill',
+              swatch: {
+                color: '#8B0015',
+                image: {
+                  src: 'https://www.transparenttextures.com/patterns/asfalt-dark.png',
+                  alt: 'Deep red twill texture',
+                },
+              },
+            },
+            {
+              name: 'Soft Weave',
+              swatch: {
+                color: '#3DDC84',
+                image: {
+                  src: 'https://www.transparenttextures.com/patterns/soft-kill.png',
+                  alt: 'Green woven fabric texture',
+                },
+              },
+            },
           ],
         },
         {
@@ -1215,9 +1242,36 @@ export async function getProducts() {
         {
           name: 'Color',
           optionValues: [
-            { name: 'Burgundy', swatch: { color: '#800020', image: null } },
-            { name: 'Black', swatch: { color: '#000000', image: null } },
-            { name: 'Brown', swatch: { color: '#8B4513', image: null } },
+            {
+              name: 'Burgundy Weave',
+              swatch: {
+                color: '#800020',
+                image: {
+                  src: 'https://www.transparenttextures.com/patterns/asfalt-dark.png',
+                  alt: 'Burgundy fabric texture',
+                },
+              },
+            },
+            {
+              name: 'Black Denim',
+              swatch: {
+                color: '#000000',
+                image: {
+                  src: 'https://www.transparenttextures.com/patterns/black-paper.png',
+                  alt: 'Black denim texture',
+                },
+              },
+            },
+            {
+              name: 'Brown Grain',
+              swatch: {
+                color: '#8B4513',
+                image: {
+                  src: 'https://www.transparenttextures.com/patterns/soft-kill.png',
+                  alt: 'Brown textured fabric',
+                },
+              },
+            },
           ],
         },
         {

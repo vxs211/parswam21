@@ -13,7 +13,7 @@ import { Text } from './text'
 const filters = [
   {
     id: 'color',
-    name: 'Color',
+    name: 'Texture',
     options: [
       { value: 'white', label: 'White' },
       { value: 'beige', label: 'Beige' },

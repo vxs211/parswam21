@@ -4,6 +4,7 @@ import { ChevronDownIcon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
 const jeansCategories = [
@@ -38,6 +39,7 @@ interface ShopDropdownProps {
 }
 
 const ShopDropdown = ({ className }: ShopDropdownProps) => {
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [isPointerFine, setIsPointerFine] = useState<boolean | null>(null)
   const triggerRef = useRef<HTMLDivElement | null>(null)
@@ -82,8 +84,9 @@ const ShopDropdown = ({ className }: ShopDropdownProps) => {
     >
       {/* Shop Button */}
       <button
+        type="button"
         className="flex items-center gap-1 font-sans text-sm/6 uppercase transition-colors hover:text-zinc-600"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => router.push('/collections/all')}
       >
         Shop
         <ChevronDownIcon className={clsx('h-4 w-4 transition-transform duration-200', isOpen && 'rotate-180')} />

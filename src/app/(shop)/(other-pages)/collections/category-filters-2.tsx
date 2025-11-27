@@ -39,7 +39,7 @@ const filters = [
   },
   {
     id: 'color',
-    name: 'Color',
+    name: 'Texture',
     options: [
       { value: 'white', label: 'White' },
       { value: 'black', label: 'Black' },

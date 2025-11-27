@@ -10,7 +10,7 @@ import { HugeiconsIcon } from '@hugeicons/react'
 const filters = [
   {
     id: 'color',
-    name: 'Color',
+    name: 'Texture',
     options: [
       { value: 'white', label: 'White', checked: true },
       { value: 'beige', label: 'Beige' },

@@ -19,7 +19,7 @@ export function ProductForm({ product }: { product: TProductItem }) {
   const status = 'in stock'
 
   const collection = collections[0]
-  const currentColor = selected_options.filter((option) => option.name === 'Color')?.[0].value
+  const currentTexture = selected_options.filter((option) => option.name === 'Color')?.[0].value
 
   // NOTE: this for demo ...
   // You need to recalculate according to your data structure and project
@@ -56,7 +56,7 @@ export function ProductForm({ product }: { product: TProductItem }) {
         <Breadcrumb breadcrumbs={breadcrumbs} currentPage={title} />
 
         <Heading level={1} className="mt-4" title={title} bigger>
-          <span data-slot="italic">{currentColor}</span>
+          <span data-slot="italic">{currentTexture}</span>
           <br />
           <span className="lowercase" data-slot="dim">
             {title}
@@ -90,7 +90,7 @@ export function ProductForm({ product }: { product: TProductItem }) {
           {options?.map(({ name: optionName, optionValues }) => {
             return (
               <div key={optionName}>
-                <Text>{optionName}</Text>
+                <Text>{optionName === 'Color' ? 'Texture' : optionName}</Text>
 
                 <div
                   className={clsx(
@@ -202,7 +202,14 @@ function ProductOptionSwatch({
         isSelected && 'ring-2 ring-slate-900 ring-offset-2'
       )}
       style={{
-        backgroundColor: color || 'transparent',
+        ...(image?.src
+          ? {
+              backgroundImage: `url(${image.src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }
+          : {}),
+        ...(color && !image?.src ? { backgroundColor: color } : {}),
       }}
       title={inStock ? name : 'Out of stock'}
       aria-disabled={!inStock}

@@ -33,8 +33,8 @@ export default function ProductCard({
     : primaryImageSrc?.replace(/(Parshwam-)(\d+)(\.webp)$/u, '$1$2-$2$3')
   const hasHoverImage = Boolean(hoverImageSrc && hoverImageSrc !== primaryImageSrc)
 
-  // find the product color
-  const color = selected_options.find((option) => option.name === 'Color')?.value
+  // find the product texture (stored in the Color option)
+  const texture = selected_options.find((option) => option.name === 'Color')?.value
   // find the product size-like option and normalize display to a fixed waist size
   const hasSizeOption = selected_options.some((option) => option.name === 'Size' || option.name === 'Pack Size')
   const size = hasSizeOption ? '32 INCH' : undefined
@@ -94,7 +94,7 @@ export default function ProductCard({
           </TextLink>
           <Text className="">₹{(price * 10).toFixed(1)}</Text>
         </div>
-        <Text className="mt-0.5 text-xs text-zinc-500">{color ?? size ?? ''}</Text>
+        <Text className="mt-0.5 text-xs text-zinc-500">{texture ?? size ?? ''}</Text>
       </div>
     </div>
   )

@@ -20,8 +20,8 @@ export default function ProductCardHorizontal({ product, className, imageRatio =
 
   const { title, price, selected_options, featured_image, handle, images } = product
 
-  // find the product color
-  const color = selected_options.find((option) => option.name === 'Color')?.value
+  // find the product texture (stored in the Color option)
+  const texture = selected_options.find((option) => option.name === 'Color')?.value
   // find the product size-like option and normalize display to a fixed waist size
   const hasSizeOption = selected_options.some((option) => option.name === 'Size' || option.name === 'Pack Size')
   const size = hasSizeOption ? '32 INCH' : undefined
@@ -46,7 +46,7 @@ export default function ProductCardHorizontal({ product, className, imageRatio =
             <span className="absolute inset-0"></span>
             {title}
           </TextLink>
-          <Text className="mt-0.5 text-xs text-zinc-500">{color ?? size ?? ''}</Text>
+          <Text className="mt-0.5 text-xs text-zinc-500">{texture ?? size ?? ''}</Text>
           <Text className="mt-auto leading-tight sm:leading-6">₹{price.toFixed(2)}</Text>
         </div>
       </div>

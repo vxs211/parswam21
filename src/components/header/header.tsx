@@ -22,8 +22,8 @@ const Header = ({ className, hasBottomBorder = true, variant = 'default' }: Head
     <header
       className={clsx(
         className,
-        'group z-10 w-full',
-        variant === 'default' && 'relative bg-white',
+        'group z-30 w-full',
+        variant === 'default' && 'sticky top-0 bg-white',
         variant === 'bg-transparent-text-white' &&
           'absolute inset-x-0 top-0 bg-transparent text-white transition-colors duration-300 has-[.parswam-popover-full-panel]:text-zinc-950'
       )}

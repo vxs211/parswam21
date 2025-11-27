@@ -29,7 +29,7 @@ const data = [
     id: 4,
     title: 'EASY PAY',
     description:
-      'Smooth & Secure Checkout<br/>Pay effortlessly using your preferred payment method — simple, fast, and hassle-free.',
+      'Smooth, Secure & Super Convenient<br/>Pay online or choose Cash on Delivery (COD) — every checkout stays quick, safe, and hassle-free.',
     icon: CoinsDollarIcon,
   },
   {
