@@ -74,7 +74,13 @@ const FeatureSection2 = ({
       </div>
 
       <div className="relative flex flex-1/2 lg:justify-center 2xl:flex-4/7">
-        <div className={clsx('w-full max-w-md', variant === 'up' && 'self-end', variant === 'down' && 'self-start')}>
+        <div
+          className={clsx(
+            'w-full max-w-md',
+            variant === 'up' && 'self-start lg:mt-6 xl:mt-10',
+            variant === 'down' && 'self-start'
+          )}
+        >
           {heading && <Heading className="mb-8" dangerouslySetInnerHTML={{ __html: heading }}></Heading>}
 
           <dl className="divide-y divide-zinc-900/10">
