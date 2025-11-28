@@ -35,7 +35,7 @@ const HeroSection2 = ({ className }: HeroSection2Props) => {
           </div>
         </div>
 
-        <div className="relative flex-2/5">
+        <div className="relative mt-12 flex-2/5 sm:mt-12 lg:mt-20">
           <Image
             src={'/images/skincare/hero.png'}
             alt="hero"
