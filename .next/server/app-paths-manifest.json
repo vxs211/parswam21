@@ -1,4 +1,6 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js"
+  "/(shop)/(other-pages)/privacy-policy/page": "app/(shop)/(other-pages)/privacy-policy/page.js",
+  "/(shop)/(home-skincare)/page": "app/(shop)/(home-skincare)/page.js",
+  "/(shop)/(other-pages)/our-story/page": "app/(shop)/(other-pages)/our-story/page.js",
+  "/(shop)/(other-pages)/collections/[handle]/page": "app/(shop)/(other-pages)/collections/[handle]/page.js"
 }
